@@ -8,7 +8,7 @@
     <meta name="description" content="bootstrap admin template">
     <meta name="author" content="">
     
-    <title>Distributor - Inventory Management System</title>
+    <title>Pemesanan - Inventory Management System</title>
     
     <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
     <link rel="shortcut icon" href="../images/favicon.ico">
@@ -79,9 +79,9 @@
           <div class="col-xxl-4">
             <div id="recentActivityWidget" class="card card-shadow card-lg pb-20" style="padding-left:10%;padding-right:10%;">
               
-              <center><h1>PEMESANAN BARANG</h1></center>
+              <center><h1>PEMESANAN</h1></center>
               <center><h3>01 January 2019</h3>
-              <button type="button" data-target="#modaltambah" data-toggle="modal" class="btn btn-outline btn-primary float-right"><i class="icon wb-plus" aria-hidden="true"></i> Tambah Data</button></center>
+              <button type="button" data-target="#modaltambah" data-toggle="modal" class="btn btn-outline btn-primary float-right"><i class="icon wb-plus" aria-hidden="true"></i> Pesanan</button></center>
               
               <!-- Modal -->
               <div class="modal fade" id="modaltambah" aria-hidden="true" aria-labelledby="examplePositionCenter"
@@ -92,24 +92,18 @@
                                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">×</span>
                                   </button>
-                                  <h4 class="modal-title" id="exampleModalTitle">Tambah Data Barang</h4>
+                                  <h4 class="modal-title" id="exampleModalTitle">Pesanan</h4>
                                 </div>
                                 <div class="modal-body">
-                                <h4 class="example-title">ID Submit Distributor</h4>
-                                <input type="text" class="form-control" id="inputPlaceholder"  disabled>
+                                <h4 class="example-title">ID Submit  Pemesanan</h4>
+                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="500003"  disabled>
                                 <h4 class="example-title">Nama Distributor</h4>
-                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="Nama Distributor">
-                                <h4 class="example-title">Alamat Distributor</h4>
-                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="Alamat Distributor">
-                                <h4 class="example-title">Nomor Telepon Distributor</h4>
-                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="Nomor Telepon Distributor">
-                                <h4 class="example-title">Nama PIC</h4>
-                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="Nama PIC">
-                                <h4 class="example-title">Kontak PIC</h4>
-                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="Kontak PIC">
-                                <h4 class="example-title">Status Aktif Distributor</h4>
-                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="Status Aktif Distributor">
-                                <h4 class="example-title">Tanggal Masuk Distributor</h4>
+                                <select class="form-control" data-plugin="select2" data-minimum-input-length="2">
+                                    <option >Distributor Hezaar</option>
+                                    <option >Distributor Verdy</option>
+                                    <option >Distributor Hiber</option>
+                                </select>
+                                <h4 class="example-title">Tanggal Masuk Pemesanan</h4>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
@@ -117,9 +111,89 @@
                                         </span>
                                     </div>
                                     <input type="text" class="form-control" data-plugin="datepicker">
-                                </div>
-                                <h4 class="example-title">Status Aktif Barang</h4>
-                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="Status Aktif Barang">
+                                </div>    
+                                <br>
+                                Jumlah
+                                <select class="form-control col-md-2" data-plugin="select2" data-minimum-input-length="2">
+                                  <option >1</option>
+                                  <option >2</option>
+                                  <option >3</option>
+                                  <option >4</option>
+                                  <option >5</option>
+                                  <option >6</option>
+                                  <option >7</option>
+                                  <option >8</option>
+                                  <option >9</option>
+                                  <option >10</option>
+                                  <option >11</option>
+                                  <option >12</option>
+                                  <option >13</option>
+                                  <option >14</option>
+                                  <option >15</option>
+                                  <option >16</option>
+                                  <option >17</option>
+                                  <option >18</option>
+                                  <option >19</option>
+                                  <option >20</option>
+                                </select>
+
+                                <div class="example table-responsive">
+                    <table class="table table-bordered" style="text-align:center;">
+                      <thead>
+                        <tr>
+                          <th> # </th>
+                          <th>Nama Barang</th>
+                          <th>Jumlah</th>
+                          <th>Harga</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                          <div class="checkbox-custom checkbox-primary">
+                              <input type="checkbox" id="inputUnchecked"/>
+                              <label for="inputUnchecked"></label>
+                          </div>              
+                          </td>
+                          <td>
+                            <select class="form-control" data-plugin="select2" data-minimum-input-length="2">
+                              <option >Semen</option>
+                              <option >Cat</option>
+                              <option >Pasir</option>
+                              </select>
+                          </td>
+                          <td>
+                            <input type="text" class="form-control" id="inputPlaceholder" placeholder="Jumlah Barang">
+                          </td>
+                          <td>1500000</td>
+                          
+                        </tr>
+                        <tr>
+                          
+                        <td>
+                          <div class="checkbox-custom checkbox-primary">
+                              <input type="checkbox" id="inputUnchecked"/>
+                              <label for="inputUnchecked"></label>
+                          </div>              
+                          </td>
+                          <td>
+                            <select class="form-control" data-plugin="select2" data-minimum-input-length="2">
+                              <option >Semen</option>
+                              <option >Cat</option>
+                              <option >Pasir</option>
+                              </select>
+                          </td>
+                          <td>
+                            <input type="text" class="form-control" id="inputPlaceholder" placeholder="Jumlah Barang">
+                          </td>
+                          <td>1000000</td>
+                          
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                  </div>
+            
                                 
                                 </div>
                                 <div class="modal-footer">
@@ -131,9 +205,8 @@
                           </div>
                           <!-- End Modal -->
 
-
-                        <!-- Modal Edit -->
-                          <div class="modal fade" id="modaledit" aria-hidden="true" aria-labelledby="examplePositionCenter"
+                          <!-- dummydetail1 -->
+                          <div class="modal fade" id="dummyd1" aria-hidden="true" aria-labelledby="examplePositionCenter"
                             role="dialog" tabindex="-1">
                             <div class="modal-dialog modal-simple modal-center">
                               <div class="modal-content">
@@ -141,35 +214,74 @@
                                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">×</span>
                                   </button>
-                                  <h4 class="modal-title" id="exampleModalTitle">Tambah Data Barang</h4>
+                                  <h4 class="modal-title" id="exampleModalTitle">Pesanan</h4>
                                 </div>
                                 <div class="modal-body">
-                                <h4 class="example-title">ID Submit Distributor</h4>
-                                <input type="text" class="form-control" id="inputPlaceholder"  disabled>
+                                <h4 class="example-title">ID Submit  Pemesanan</h4>
+                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="500003"  disabled>
                                 <h4 class="example-title">Nama Distributor</h4>
-                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="Nama Distributor">
-                                <h4 class="example-title">Alamat Distributor</h4>
-                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="Alamat Distributor">
-                                <h4 class="example-title">Nomor Telepon Distributor</h4>
-                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="Nomor Telepon Distributor">
-                                <h4 class="example-title">Nama PIC</h4>
-                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="Nama PIC">
-                                <h4 class="example-title">Kontak PIC</h4>
-                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="Kontak PIC">
-                                <h4 class="example-title">Status Aktif Distributor</h4>
-                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="Status Aktif Distributor">
-                                <h4 class="example-title">Tanggal Masuk Distributor</h4>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">
-                                            <i class="icon wb-calendar" aria-hidden="true"></i>
-                                        </span>
-                                    </div>
-                                    <input type="text" class="form-control" data-plugin="datepicker">
-                                </div>
-                                <h4 class="example-title">Status Aktif Barang</h4>
-                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="Status Aktif Barang">
+                                <select class="form-control" data-plugin="select2" data-minimum-input-length="2" disabled>
+                                    <option selected>Distributor Hezaar</option>
+                                    <option >Distributor Verdy</option>
+                                    <option >Distributor Hiber</option>
+                                </select>
+                                <h4 class="example-title">Tanggal Masuk Pemesanan</h4>
+                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="01 July 2019"  disabled>
+                                <br>
                                 
+                                <div class="example table-responsive">
+                    <table class="table table-bordered" style="text-align:center;">
+                      <thead>
+                        <tr>
+                          <th> # </th>
+                          <th>Nama Barang</th>
+                          <th>Jumlah</th>
+                          <th>Harga</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                          1
+                          </div>              
+                          </td>
+                          <td>
+                            <select class="form-control" data-plugin="select2" data-minimum-input-length="2" disabled>
+                              <option selected>Semen</option>
+                              <option >Cat</option>
+                              <option >Pasir</option>
+                              </select>
+                          </td>
+                          <td>
+                            <input type="text" class="form-control" id="inputPlaceholder" placeholder="20" disabled>
+                          </td>
+                          <td>1500000</td>
+                          
+                        </tr>
+                        <tr>
+                          
+                        <td>
+                          2
+                          </div>              
+                          </td>
+                          <td>
+                            <select class="form-control" data-plugin="select2" data-minimum-input-length="2" disabled>
+                              <option >Semen</option>
+                              <option selected>Cat</option>
+                              <option >Pasir</option>
+                              </select>
+                          </td>
+                          <td>
+                            <input type="text" class="form-control" id="inputPlaceholder" placeholder="10" disabled>
+                          </td>
+                          <td>1000000</td>
+                          
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                  </div>
+            
                                 
                                 </div>
                                 <div class="modal-footer">
@@ -181,20 +293,294 @@
                           </div>
                           <!-- End Modal -->
 
+
+                          <!-- dummydetail2 -->
+                          <div class="modal fade" id="dummyd2" aria-hidden="true" aria-labelledby="examplePositionCenter"
+                            role="dialog" tabindex="-1">
+                            <div class="modal-dialog modal-simple modal-center">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                  </button>
+                                  <h4 class="modal-title" id="exampleModalTitle">Pesanan</h4>
+                                </div>
+                                <div class="modal-body">
+                                <h4 class="example-title">ID Submit  Pemesanan</h4>
+                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="500003"  disabled>
+                                <h4 class="example-title">Nama Distributor</h4>
+                                <select class="form-control" data-plugin="select2" data-minimum-input-length="2" disabled>
+                                    <option >Distributor Hezaar</option>
+                                    <option selected>Distributor Verdy</option>
+                                    <option >Distributor Hiber</option>
+                                </select>
+                                <h4 class="example-title">Tanggal Masuk Pemesanan</h4>
+                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="01 July 2019"  disabled>
+                                <br>
+                                
+                                <div class="example table-responsive">
+                    <table class="table table-bordered" style="text-align:center;">
+                      <thead>
+                        <tr>
+                          <th> # </th>
+                          <th>Nama Barang</th>
+                          <th>Jumlah</th>
+                          <th>Harga</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                          1
+                          </div>              
+                          </td>
+                          <td>
+                            <select class="form-control" data-plugin="select2" data-minimum-input-length="2" disabled>
+                              <option selected>Semen</option>
+                              <option >Cat</option>
+                              <option >Pasir</option>
+                              </select>
+                          </td>
+                          <td>
+                            <input type="text" class="form-control" id="inputPlaceholder" placeholder="60" disabled>
+                          </td>
+                          <td>6520000</td>
+                          
+                        </tr>
+                        <tr>
+                          
+                        <td>
+                          2
+                          </div>              
+                          </td>
+                          <td>
+                            <select class="form-control" data-plugin="select2" data-minimum-input-length="2" disabled>
+                              <option >Semen</option>
+                              <option >Cat</option>
+                              <option selected>Pasir</option>
+                              </select>
+                          </td>
+                          <td>
+                            <input type="text" class="form-control" id="inputPlaceholder" placeholder="40" disabled>
+                          </td>
+                          <td>3300000</td>
+                          
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                  </div>
+            
+                                
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                                  <button type="button" class="btn btn-primary">Simpan</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- End Modal -->
+
+
+                          <!-- dummyedit1 -->
+                          <div class="modal fade" id="dummye1" aria-hidden="true" aria-labelledby="examplePositionCenter"
+                            role="dialog" tabindex="-1">
+                            <div class="modal-dialog modal-simple modal-center">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                  </button>
+                                  <h4 class="modal-title" id="exampleModalTitle">Pesanan</h4>
+                                </div>
+                                <div class="modal-body">
+                                <h4 class="example-title">ID Submit  Pemesanan</h4>
+                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="500003"  >
+                                <h4 class="example-title">Nama Distributor</h4>
+                                <select class="form-control" data-plugin="select2" data-minimum-input-length="2" >
+                                    <option selected>Distributor Hezaar</option>
+                                    <option >Distributor Verdy</option>
+                                    <option >Distributor Hiber</option>
+                                </select>
+                                <h4 class="example-title">Tanggal Masuk Pemesanan</h4>
+                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="01 July 2019" disabled>
+                                <br>
+                                
+                                <div class="example table-responsive">
+                    <table class="table table-bordered" style="text-align:center;">
+                      <thead>
+                        <tr>
+                          <th> # </th>
+                          <th>Nama Barang</th>
+                          <th>Jumlah</th>
+                          <th>Harga</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                          <div class="checkbox-custom checkbox-primary">
+                              <input type="checkbox" id="inputUnchecked"/>
+                              <label for="inputUnchecked"></label>
+                          </div>              
+                          </td>
+                          <td>
+                            <select class="form-control" data-plugin="select2" data-minimum-input-length="2" >
+                              <option selected>Semen</option>
+                              <option >Cat</option>
+                              <option >Pasir</option>
+                              </select>
+                          </td>
+                          <td>
+                            <input type="text" class="form-control" id="inputPlaceholder" placeholder="20" >
+                          </td>
+                          <td>1500000</td>
+                          
+                        </tr>
+                        <tr>
+                          
+                        <td>
+                        <div class="checkbox-custom checkbox-primary">
+                              <input type="checkbox" id="inputUnchecked" checked/>
+                              <label for="inputUnchecked"></label>
+                          </div>              
+                          </td>
+                          <td>
+                            <select class="form-control" data-plugin="select2" data-minimum-input-length="2" >
+                              <option >Semen</option>
+                              <option selected>Cat</option>
+                              <option >Pasir</option>
+                              </select>
+                          </td>
+                          <td>
+                            <input type="text" class="form-control" id="inputPlaceholder" placeholder="10" >
+                          </td>
+                          <td>1000000</td>
+                          
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                  </div>
+            
+                                
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                                  <button type="button" class="btn btn-primary">Simpan</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- End Modal -->
+
+                           <!-- dummyedit2 -->
+                           <div class="modal fade" id="dummye2" aria-hidden="true" aria-labelledby="examplePositionCenter"
+                            role="dialog" tabindex="-1">
+                            <div class="modal-dialog modal-simple modal-center">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                  </button>
+                                  <h4 class="modal-title" id="exampleModalTitle">Pesanan</h4>
+                                </div>
+                                <div class="modal-body">
+                                <h4 class="example-title">ID Submit  Pemesanan</h4>
+                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="500003"  disabled>
+                                <h4 class="example-title">Nama Distributor</h4>
+                                <select class="form-control" data-plugin="select2" data-minimum-input-length="2" disabled>
+                                    <option >Distributor Hezaar</option>
+                                    <option selected>Distributor Verdy</option>
+                                    <option >Distributor Hiber</option>
+                                </select>
+                                <h4 class="example-title">Tanggal Masuk Pemesanan</h4>
+                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="01 July 2019"  disabled>
+                                <br>
+                                
+                                <div class="example table-responsive">
+                    <table class="table table-bordered" style="text-align:center;">
+                      <thead>
+                        <tr>
+                          <th> # </th>
+                          <th>Nama Barang</th>
+                          <th>Jumlah</th>
+                          <th>Harga</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                          <div class="checkbox-custom checkbox-primary">
+                              <input type="checkbox" id="inputUnchecked" checked/>
+                              <label for="inputUnchecked"></label>
+                          </div>
+                          </div>              
+                          </td>
+                          <td>
+                            <select class="form-control" data-plugin="select2" data-minimum-input-length="2" >
+                              <option selected>Semen</option>
+                              <option >Cat</option>
+                              <option >Pasir</option>
+                              </select>
+                          </td>
+                          <td>
+                            <input type="text" class="form-control" id="inputPlaceholder" placeholder="60" >
+                          </td>
+                          <td>6520000</td>
+                          
+                        </tr>
+                        <tr>
+                          
+                        <td>
+                        <div class="checkbox-custom checkbox-primary">
+                              <input type="checkbox" id="inputUnchecked" checked/>
+                              <label for="inputUnchecked"></label>
+                          </div>
+                          </div>              
+                          </td>
+                          <td>
+                            <select class="form-control" data-plugin="select2" data-minimum-input-length="2" >
+                              <option >Semen</option>
+                              <option >Cat</option>
+                              <option selected>Pasir</option>
+                              </select>
+                          </td>
+                          <td>
+                            <input type="text" class="form-control" id="inputPlaceholder" placeholder="40" >
+                          </td>
+                          <td>3300000</td>
+                          
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                  </div>
+            
+                                
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                                  <button type="button" class="btn btn-primary">Simpan</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- End Modal -->
+
+
               <br>
               
               <div class="example table-responsive">
                     <table class="table table-bordered" style="text-align:center;">
                       <thead>
                         <tr>
+                          <th>ID Submit Pemesanan</th>
                           <th>ID Submit Distributor</th>
-                          <th>Nama Distributor</th>
-                          <th>Alamat Distributor</th>
-                          <th>No Telepon Distributor</th>
-                          <th>Nama PIC</th>
-                          <th>Kontak PIC</th>
-                          <th>Status Aktif Distributor</th>
-                          <th>Tanggal Tambah Distributor</th>
+                          <th>Tanggal Pemesanan</th>
+                          <th>Status Aktif Pemesanan</th>
+                          <th>Pesanan Selesai</th>
                           <th>ID User Add</th>
                           <th class="text-nowrap">Action</th>
                         </tr>
@@ -202,23 +588,47 @@
                       <tbody>
                         <tr>
                           
-                          <td>A1</td>
-                          <td>A2</td>
-                          <td>A3</td>
-                          <td>A4</td>
-                          <td>A5</td>
-                          <td>A6</td>
-                          <td>A7</td>
-                          <td>A8</td>
-                          <td>A9</td>
+                          <td>500001</td>
+                          <td>700001</td>
+                          <td>01 July 2019</td>
+                          <td>1</td>
+                          <td>Belum</td>
+                          <td>800001</td>
                           <td class="text-nowrap">
                             <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" 
-                              data-original-title="Edit" data-target="#modaledit" data-toggle="modal">
+                              data-original-title="Edit" data-target="#dummye1" data-toggle="modal">
                               <i class="icon wb-wrench" aria-hidden="true"></i> EDIT
                             </button>
                             <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-toggle="tooltip"
                               data-original-title="Delete">
                               <i class="icon wb-close" aria-hidden="true"></i> DELETE
+                            </button>
+                            <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-target="#dummyd1" data-toggle="modal"
+                              data-original-title="Detail">
+                              DETAIL
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          
+                          <td>500002</td>
+                          <td>700002</td>
+                          <td>01 July 2019</td>
+                          <td>1</td>
+                          <td>Belum</td>
+                          <td>800001</td>
+                          <td class="text-nowrap">
+                            <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" 
+                              data-original-title="Edit" data-target="#dummye2" data-toggle="modal">
+                              <i class="icon wb-wrench" aria-hidden="true"></i> EDIT
+                            </button>
+                            <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-toggle="tooltip"
+                              data-original-title="Delete">
+                              <i class="icon wb-close" aria-hidden="true"></i> DELETE
+                            </button>
+                            <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-target="#dummyd2" data-toggle="modal"
+                              data-original-title="Detail">
+                              DETAIL
                             </button>
                           </td>
                         </tr>
