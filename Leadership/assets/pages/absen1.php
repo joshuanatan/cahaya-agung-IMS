@@ -107,11 +107,23 @@
                                 </div>
                                 <div class="checkbox-custom checkbox-primary">
                                     <input type="checkbox" id="inputUnchecked" />
-                                    <label for="inputUnchecked">Karyawan1</label>
+                                    <label for="inputUnchecked">Herman</label>
                                 </div>
                                 <div class="checkbox-custom checkbox-primary">
-                                    <input type="checkbox" id="inputUnchecked" checked />
-                                    <label for="inputChecked">Karyawan2</label>
+                                    <input type="checkbox" id="inputUnchecked"/>
+                                    <label for="inputChecked">Budi</label>
+                                </div>
+                                <div class="checkbox-custom checkbox-primary">
+                                    <input type="checkbox" id="inputUnchecked" />
+                                    <label for="inputUnchecked">Kelvin</label>
+                                </div>
+                                <div class="checkbox-custom checkbox-primary">
+                                    <input type="checkbox" id="inputUnchecked" />
+                                    <label for="inputUnchecked">Ryan</label>
+                                </div>
+                                <div class="checkbox-custom checkbox-primary">
+                                    <input type="checkbox" id="inputUnchecked" />
+                                    <label for="inputUnchecked">Rubin</label>
                                 </div>
                                 
                                 </div>
@@ -159,6 +171,145 @@
                           <!-- End Modal -->
 
               <br>
+
+              <!-- dummy 1 -->
+            <div class="modal fade" id="dummy1" aria-hidden="true" aria-labelledby="examplePositionCenter"
+                            role="dialog" tabindex="-1">
+                            <div class="modal-dialog modal-simple modal-center">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                  </button>
+                                  <h4 class="modal-title" id="exampleModalTitle">Absen</h4>
+                                </div>
+                                <div class="modal-body">
+                                <h4 class="example-title">Tanggal</h4>
+                                
+                                    <input type="text" class="form-control"  placeholder=" 01 July 2019" disabled>
+                                
+                                <div class="checkbox-custom checkbox-primary">
+                                    <input type="checkbox" id="inputUnchecked" checked/>
+                                    <label for="inputUnchecked">Herman</label>
+                                </div>
+                                <div class="checkbox-custom checkbox-primary">
+                                    <input type="checkbox" id="inputUnchecked" checked />
+                                    <label for="inputChecked">Budi</label>
+                                </div>
+                                <div class="checkbox-custom checkbox-primary">
+                                    <input type="checkbox" id="inputUnchecked" checked/>
+                                    <label for="inputUnchecked">Kelvin</label>
+                                </div>
+                                <div class="checkbox-custom checkbox-primary">
+                                    <input type="checkbox" id="inputUnchecked" checked/>
+                                    <label for="inputUnchecked">Ryan</label>
+                                </div>
+                                <div class="checkbox-custom checkbox-primary">
+                                    <input type="checkbox" id="inputUnchecked" checked/>
+                                    <label for="inputUnchecked">Rubin</label>
+                                </div>
+                                
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                                  <button type="button" class="btn btn-primary">Simpan</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- End Modal -->
+
+                          <!-- dummy2 -->
+            <div class="modal fade" id="dummy2" aria-hidden="true" aria-labelledby="examplePositionCenter"
+                            role="dialog" tabindex="-1">
+                            <div class="modal-dialog modal-simple modal-center">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                  </button>
+                                  <h4 class="modal-title" id="exampleModalTitle">Absen</h4>
+                                </div>
+                                <div class="modal-body">
+                                <h4 class="example-title">Tanggal</h4>
+                                <input type="text" class="form-control"  placeholder=" 02 July 2019" disabled>
+                                <div class="checkbox-custom checkbox-primary">
+                                    <input type="checkbox" id="inputUnchecked" />
+                                    <label for="inputUnchecked">Herman</label>
+                                </div>
+                                <div class="checkbox-custom checkbox-primary">
+                                    <input type="checkbox" id="inputUnchecked" checked />
+                                    <label for="inputChecked">Budi</label>
+                                </div>
+                                <div class="checkbox-custom checkbox-primary">
+                                    <input type="checkbox" id="inputUnchecked" checked/>
+                                    <label for="inputUnchecked">Kelvin</label>
+                                </div>
+                                <div class="checkbox-custom checkbox-primary">
+                                    <input type="checkbox" id="inputUnchecked" checked/>
+                                    <label for="inputUnchecked">Ryan</label>
+                                </div>
+                                <div class="checkbox-custom checkbox-primary">
+                                    <input type="checkbox" id="inputUnchecked" checked/>
+                                    <label for="inputUnchecked">Rubin</label>
+                                </div>
+                                
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                                  <button type="button" class="btn btn-primary">Simpan</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- End Modal -->
+
+
+                          <!-- dummy3 -->
+            <div class="modal fade" id="dummy3" aria-hidden="true" aria-labelledby="examplePositionCenter"
+                            role="dialog" tabindex="-1">
+                            <div class="modal-dialog modal-simple modal-center">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                  </button>
+                                  <h4 class="modal-title" id="exampleModalTitle">Absen</h4>
+                                </div>
+                                <div class="modal-body">
+                                <h4 class="example-title">Tanggal</h4>
+                                <input type="text" class="form-control"  placeholder=" 03 July 2019" disabled>
+                                <div class="checkbox-custom checkbox-primary">
+                                    <input type="checkbox" id="inputUnchecked" />
+                                    <label for="inputUnchecked">Herman</label>
+                                </div>
+                                <div class="checkbox-custom checkbox-primary">
+                                    <input type="checkbox" id="inputUnchecked" checked />
+                                    <label for="inputChecked">Budi</label>
+                                </div>
+                                <div class="checkbox-custom checkbox-primary">
+                                    <input type="checkbox" id="inputUnchecked" checked/>
+                                    <label for="inputUnchecked">Kelvin</label>
+                                </div>
+                                <div class="checkbox-custom checkbox-primary">
+                                    <input type="checkbox" id="inputUnchecked" checked/>
+                                    <label for="inputUnchecked">Ryan</label>
+                                </div>
+                                <div class="checkbox-custom checkbox-primary">
+                                    <input type="checkbox" id="inputUnchecked" />
+                                    <label for="inputUnchecked">Rubin</label>
+                                </div>
+                                
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                                  <button type="button" class="btn btn-primary">Simpan</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- End Modal -->
+
               
               <div class="example table-responsive">
                     <table class="table table-bordered" style="text-align:center;">
@@ -171,11 +322,55 @@
                       <tbody>
                         <tr>
                           
-                          <td>01 january</td>
+                          <td>01 July 2019</td>
+                          <td class="text-nowrap">
+                            <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-target="#dummy1" data-toggle="modal"
+                              data-original-title="Edit">
+                              <i class="icon wb-wrench" aria-hidden="true"></i> CHECK
+                            </button>
+                            
+                          </td>
+                        </tr>
+                        <tr>
+                          
+                          <td>02 July 2019</td>
+                          <td class="text-nowrap">
+                            <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-target="#dummy2" data-toggle="modal"
+                              data-original-title="Edit">
+                              <i class="icon wb-wrench" aria-hidden="true"></i> CHECK
+                            </button>
+                            
+                          </td>
+                        </tr>
+                        <tr>
+                          
+                          <td>03 July 2019</td>
+                          <td class="text-nowrap">
+                            <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-target="#dummy3" data-toggle="modal"
+                              data-original-title="Edit">
+                              <i class="icon wb-wrench" aria-hidden="true"></i> CHECK
+                            </button>
+                            
+                          </td>
+                        </tr>
+                        <tr>
+                          
+                          <td>04 July 2019</td>
                           <td class="text-nowrap">
                             <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-target="#editabsen" data-toggle="modal"
                               data-original-title="Edit">
-                              <i class="icon wb-wrench" aria-hidden="true"></i> EDIT
+                              <i class="icon wb-wrench" aria-hidden="true"></i> CHECK
+                            </button>
+                            
+                          </td>
+                        </tr>
+                        <tr>
+                          
+                          <td>05 July 2019</td>
+                          <td class="text-nowrap">
+                            <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-target="#editabsen" data-toggle="modal"
+                              data-original-title="Edit">
+                              <i class="icon wb-wrench" aria-hidden="true"></i> CHECK
                             </button>
                             
                           </td>
