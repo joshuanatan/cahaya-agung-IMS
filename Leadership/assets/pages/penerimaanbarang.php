@@ -112,10 +112,7 @@
                               data-original-title="Delete">
                               <i class="icon wb-close" aria-hidden="true"></i> DELETE
                             </button>
-                            <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-target="#gaji1" data-toggle="modal"
-                              data-original-title="Gaji">
-                               GAJI
-                            </button>
+                            
                           </td>
                         </tr>
                         
