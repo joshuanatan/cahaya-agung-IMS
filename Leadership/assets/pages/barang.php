@@ -96,15 +96,15 @@
                                 </div>
                                 <div class="modal-body">
                                 <h4 class="example-title">ID Submit Barang</h4>
-                                <input type="text" class="form-control" id="inputPlaceholder"  disabled>
+                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="90007" disabled>
                                 <h4 class="example-title">Nama Barang</h4>
                                 <input type="text" class="form-control" id="inputPlaceholder" placeholder="Nama Barang">
                                 <h4 class="example-title">Stok</h4>
                                 <input type="text" class="form-control" id="inputPlaceholder" placeholder="Stok Barang">
                                 <h4 class="example-title">Satuan Barang</h4>
                                 <input type="text" class="form-control" id="inputPlaceholder" placeholder="Satuan barang">
-                                <h4 class="example-title">Harga Barang Terjual</h4>
-                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="Harga Barang Terjual">
+                                <h4 class="example-title">Harga Jual Barang</h4>
+                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="Harga Jual Barang">
                                 <h4 class="example-title">Tanggal Masuk Barang</h4>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
@@ -172,6 +172,141 @@
                           </div>
                           <!-- End Modal -->
 
+
+                          <!-- Dummy1 -->
+                          <div class="modal fade" id="dummy1" aria-hidden="true" aria-labelledby="examplePositionCenter"
+                            role="dialog" tabindex="-1">
+                            <div class="modal-dialog modal-simple modal-center">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                  </button>
+                                  <h4 class="modal-title" id="exampleModalTitle">Tambah Data Barang</h4>
+                                </div>
+                                <div class="modal-body">
+                                <h4 class="example-title">ID Submit Barang</h4>
+                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="900001" disabled>
+                                <h4 class="example-title">Nama Barang</h4>
+                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="Semen Tiga Roda">
+                                <h4 class="example-title">Stok</h4>
+                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="10">
+                                <h4 class="example-title">Satuan Barang</h4>
+                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="50 kg">
+                                <h4 class="example-title">Harga Jual Barang</h4>
+                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="65000">
+                                <h4 class="example-title">Tanggal Masuk Barang</h4>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="icon wb-calendar" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" data-plugin="datepicker" placeholder="1 July 2019">
+                                </div>
+                                <h4 class="example-title">Status Aktif Barang</h4>
+                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="1">
+                                
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                                  <button type="button" class="btn btn-primary">Simpan</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- End Modal -->
+
+
+                          <!-- Dummy2 -->
+                          <div class="modal fade" id="dummy2" aria-hidden="true" aria-labelledby="examplePositionCenter"
+                            role="dialog" tabindex="-1">
+                            <div class="modal-dialog modal-simple modal-center">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                  </button>
+                                  <h4 class="modal-title" id="exampleModalTitle">Tambah Data Barang</h4>
+                                </div>
+                                <div class="modal-body">
+                                <h4 class="example-title">ID Submit Barang</h4>
+                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="90002" disabled>
+                                <h4 class="example-title">Nama Barang</h4>
+                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="Semen Tiga Roda">
+                                <h4 class="example-title">Stok</h4>
+                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="20">
+                                <h4 class="example-title">Satuan Barang</h4>
+                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="40 kg">
+                                <h4 class="example-title">Harga Jual Barang</h4>
+                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="53000">
+                                <h4 class="example-title">Tanggal Masuk Barang</h4>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="icon wb-calendar" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" data-plugin="datepicker" placeholder="1 July 2019">
+                                </div>
+                                <h4 class="example-title">Status Aktif Barang</h4>
+                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="1">
+                                
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                                  <button type="button" class="btn btn-primary">Simpan</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- End Modal -->
+
+
+                          <!-- Dummy3 -->
+                          <div class="modal fade" id="dummy3" aria-hidden="true" aria-labelledby="examplePositionCenter"
+                            role="dialog" tabindex="-1">
+                            <div class="modal-dialog modal-simple modal-center">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                  </button>
+                                  <h4 class="modal-title" id="exampleModalTitle">Tambah Data Barang</h4>
+                                </div>
+                                <div class="modal-body">
+                                <h4 class="example-title">ID Submit Barang</h4>
+                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="900003"  disabled>
+                                <h4 class="example-title">Nama Barang</h4>
+                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="Semen Holcim">
+                                <h4 class="example-title">Stok</h4>
+                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="15">
+                                <h4 class="example-title">Satuan Barang</h4>
+                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="50 Kg">
+                                <h4 class="example-title">Harga Jual Barang</h4>
+                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="64500">
+                                <h4 class="example-title">Tanggal Masuk Barang</h4>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="icon wb-calendar" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" data-plugin="datepicker" placeholder="1 July 2019">
+                                </div>
+                                <h4 class="example-title">Status Aktif Barang</h4>
+                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="1">
+                                
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                                  <button type="button" class="btn btn-primary">Simpan</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- End Modal -->
+
               <br>
               
               <div class="example table-responsive">
@@ -192,14 +327,113 @@
                       <tbody>
                         <tr>
                           
-                          <td>A1</td>
-                          <td>A2</td>
-                          <td>A3</td>
-                          <td>A4</td>
-                          <td>A5</td>
-                          <td>A6</td>
-                          <td>A7</td>
-                          <td>A8</td>
+                          <td>900001</td>
+                          <td>Semen Tiga Roda</td>
+                          <td>10</td>
+                          <td>50 Kg</td>
+                          <td>65000</td>
+                          <td>1 July 2019</td>
+                          <td>1</td>
+                          <td>800001</td>
+                          <td class="text-nowrap">
+                            <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" 
+                              data-original-title="Edit" data-target="#dummy1" data-toggle="modal">
+                              <i class="icon wb-wrench" aria-hidden="true"></i> EDIT
+                            </button>
+                            <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-toggle="tooltip"
+                              data-original-title="Delete">
+                              <i class="icon wb-close" aria-hidden="true"></i> DELETE
+                            </button>
+                          </td>
+                          <tr>
+                          <td>900002</td>
+                          <td>Semen Tiga Roda</td>
+                          <td>20</td>
+                          <td>40 Kg</td>
+                          <td>53000</td>
+                          <td>1 July 2019</td>
+                          <td>1</td>
+                          <td>800001</td>
+                          <td class="text-nowrap">
+                            <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" 
+                              data-original-title="Edit" data-target="#dummy2" data-toggle="modal">
+                              <i class="icon wb-wrench" aria-hidden="true"></i> EDIT
+                            </button>
+                            <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-toggle="tooltip"
+                              data-original-title="Delete">
+                              <i class="icon wb-close" aria-hidden="true"></i> DELETE
+                            </button>
+                          </td>
+                          </tr>
+                          <tr>
+                          <td>900003</td>
+                          <td>Semen Holcim</td>
+                          <td>15</td>
+                          <td>50 Kg</td>
+                          <td>64500</td>
+                          <td>1 July 2019</td>
+                          <td>1</td>
+                          <td>800001</td>
+                          <td class="text-nowrap">
+                            <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" 
+                              data-original-title="Edit" data-target="#dummy3" data-toggle="modal">
+                              <i class="icon wb-wrench" aria-hidden="true"></i> EDIT
+                            </button>
+                            <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-toggle="tooltip"
+                              data-original-title="Delete">
+                              <i class="icon wb-close" aria-hidden="true"></i> DELETE
+                            </button>
+                          </td>
+                          </tr>
+                          <tr>
+                          <td>900004</td>
+                          <td>Semen Holcim</td>
+                          <td>10</td>
+                          <td>40 Kg</td>
+                          <td>52000</td>
+                          <td>1 July 2019</td>
+                          <td>1</td>
+                          <td>800001</td>
+                          <td class="text-nowrap">
+                            <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" 
+                              data-original-title="Edit" data-target="#modaledit" data-toggle="modal">
+                              <i class="icon wb-wrench" aria-hidden="true"></i> EDIT
+                            </button>
+                            <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-toggle="tooltip"
+                              data-original-title="Delete">
+                              <i class="icon wb-close" aria-hidden="true"></i> DELETE
+                            </button>
+                          </td>
+                          </tr>
+                          <tr>
+                          <td>900005</td>
+                          <td>Batu Bata Batako</td>
+                          <td>10000</td>
+                          <td>Biji</td>
+                          <td>3500</td>
+                          <td>1 July 2019</td>
+                          <td>1</td>
+                          <td>800001</td>
+                          <td class="text-nowrap">
+                            <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" 
+                              data-original-title="Edit" data-target="#modaledit" data-toggle="modal">
+                              <i class="icon wb-wrench" aria-hidden="true"></i> EDIT
+                            </button>
+                            <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-toggle="tooltip"
+                              data-original-title="Delete">
+                              <i class="icon wb-close" aria-hidden="true"></i> DELETE
+                            </button>
+                          </td>
+                          </tr>
+                          <tr>
+                          <td>900006</td>
+                          <td>Batu Bata Merah</td>
+                          <td>15000</td>
+                          <td>Biji</td>
+                          <td>900</td>
+                          <td>1 July 2019</td>
+                          <td>1</td>
+                          <td>800001</td>
                           <td class="text-nowrap">
                             <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" 
                               data-original-title="Edit" data-target="#modaledit" data-toggle="modal">
