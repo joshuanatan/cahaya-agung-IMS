@@ -148,8 +148,8 @@
                                 <input type="text" class="form-control" id="inputPlaceholder" placeholder="Stok Barang">
                                 <h4 class="example-title">Satuan Barang</h4>
                                 <input type="text" class="form-control" id="inputPlaceholder" placeholder="Satuan barang">
-                                <h4 class="example-title">Harga Barang Terjual</h4>
-                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="Harga Barang Terjual">
+                                <h4 class="example-title">Harga Jual Barang</h4>
+                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="Harga Jual Barang">
                                 <h4 class="example-title">Tanggal Masuk Barang</h4>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
