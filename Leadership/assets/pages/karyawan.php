@@ -114,8 +114,8 @@
                                 <input type="text" class="form-control" id="inputPlaceholder" placeholder="Status Aktif Karyawan">
                                 <h4 class="example-title">Nomor Telepon Karyawan</h4>
                                 <input type="text" class="form-control" id="inputPlaceholder" placeholder="Nomor Telepon Karyawan">
-                                <h4 class="example-title">Status Aktif Barang</h4>
-                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="Status Aktif Barang">
+                                <h4 class="example-title">Status Aktif Karyawan</h4>
+                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="Status Aktif Karyawan">
                                 
                                 </div>
                                 <div class="modal-footer">
