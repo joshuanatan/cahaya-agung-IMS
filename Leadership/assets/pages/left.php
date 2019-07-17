@@ -12,7 +12,7 @@
               </li>-->
               <li class="site-menu-item has-sub">
                 <a href="dashboard.php">
-                        <i class="site-menu-icon wb-table" aria-hidden="true"></i>
+                        
                         <span class="site-menu-title">Home</span>
                     </a>
               </li>
