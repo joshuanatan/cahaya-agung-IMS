@@ -29,5 +29,8 @@ class Absensi extends CI_Controller{
         $this->close();
     }
 
+    public function insert(){
+        
+    }
 }
 ?>

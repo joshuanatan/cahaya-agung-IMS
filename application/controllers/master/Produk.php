@@ -30,7 +30,7 @@ class Produk extends CI_Controller{
     }
 
     public function insert(){
-
+        
             $data = array(
                 "nama_barang" => $this->input->post('nama_barang'),
                 "stok" => $this->input->post('stok'),
@@ -42,8 +42,6 @@ class Produk extends CI_Controller{
             );
             insertRow("barang", $data);
             redirect("master/produk");
-            
-        
     }
 
 }

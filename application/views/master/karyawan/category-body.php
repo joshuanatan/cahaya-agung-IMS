@@ -34,31 +34,32 @@
                 <h4 class="modal-title" id="exampleModalTitle">Tambah Data Karyawan</h4>
             </div>
             <div class="modal-body">
-                <h4 class="example-title">ID Submit Karyawan</h4>
-                <input type="text" class="form-control" id="inputPlaceholder"  disabled placeholder="600006">
-                <h4 class="example-title">Nama Karyawan</h4>
-                <input type="text" class="form-control" id="inputPlaceholder" placeholder="Nama Karyawan">
-                <h4 class="example-title">Tanggal Masuk Karyawan</h4>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">
-                            <i class="icon wb-calendar" aria-hidden="true"></i>
-                        </span>
+                <form action="<?php echo base_url(); ?>master/karyawan/insert" method="post">
+                    <h4 class="example-title">ID Submit Karyawan</h4>
+                    <input type="text" class="form-control" id="inputPlaceholder"  disabled placeholder="600006">
+                    <h4 class="example-title">Nama Karyawan</h4>
+                    <input type="text" class="form-control" id="inputPlaceholder" placeholder="Nama Karyawan" name="nama_karyawan">
+                    <h4 class="example-title">Tanggal Masuk Karyawan</h4>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="icon wb-calendar" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                        <input type="text" class="form-control" data-plugin="datepicker" name="tgl_masuk_karyawan">
                     </div>
-                    <input type="text" class="form-control" data-plugin="datepicker">
+                    <h4 class="example-title">Gaji per Jam</h4>
+                    <input type="text" class="form-control" id="inputPlaceholder" placeholder="Gaji per Jam" name="gaji_perjam">
+                    <h4 class="example-title">Nomor Telepon Karyawan</h4>
+                    <input type="text" class="form-control" id="inputPlaceholder" placeholder="Nomor Telepon Karyawan" name="nohp_karyawan">
+                    
                 </div>
-                <h4 class="example-title">Gaji per Jam</h4>
-                <input type="text" class="form-control" id="inputPlaceholder" placeholder="Gaji per Jam">
-                <h4 class="example-title">Status Aktif Karyawan</h4>
-                <input type="text" class="form-control" id="inputPlaceholder" placeholder="Status Aktif Karyawan">
-                <h4 class="example-title">Nomor Telepon Karyawan</h4>
-                <input type="text" class="form-control" id="inputPlaceholder" placeholder="Nomor Telepon Karyawan">
-                
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
-                <button type="button" class="btn btn-primary">Simpan</button>
-            </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                    
+                </div>
+            </form>
         </div>
     </div>
 </div>

@@ -29,5 +29,19 @@ class Karyawan extends CI_Controller{
         $this->close();
     }
 
+    public function insert(){
+        $data = array(
+            "nama_karyawan" => $this->input->post('nama_karyawan'),
+            "tgl_masuk_karyawan" => $this->input->post('tgl_masuk_karyawan'),
+            "gaji_perjam" => $this->input->post('gaji_perjam'),
+            "status_aktif_karyawan" => 1,
+            "nohp_karyawan" => $this->input->post('nohp_karyawan'),
+            "id_user_add" => 0
+        );
+
+        insertRow("karyawan", $data);
+        redirect('master/karyawan');
+
+    }
 }
 ?>

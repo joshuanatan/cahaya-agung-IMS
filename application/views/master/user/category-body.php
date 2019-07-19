@@ -30,23 +30,25 @@
                 <h4 class="modal-title" id="exampleModalTitle">Tambah Data Karyawan</h4>
             </div>
             <div class="modal-body">
-                <h4 class="example-title">ID User</h4>
-                <input type="text" class="form-control" id="inputPlaceholder"  disabled placeholder="600006">
-                <h4 class="example-title">Nama User</h4>
-                <input type="text" class="form-control" id="inputPlaceholder" placeholder="Nama Karyawan">
-                <h4 class="example-title">Password</h4>
-                <input type="password" class="form-control" id="inputPlaceholder">
-                <h4 class="example-title">Role</h4>
-                <select class="form-control" id="inputPlaceholder" placeholder="Nama Karyawan">
-                    <option value = "">ADMIN</option>
-                    <option value = "">USER</option>
-                </select>
-                
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
-                <button type="button" class="btn btn-primary">Simpan</button>
-            </div>
+                <form action="<?php echo base_url(); ?>master/user/insert" method="post">
+                    <h4 class="example-title">ID User</h4>
+                    <input type="text" class="form-control" id="inputPlaceholder"  disabled placeholder="600006">
+                    <h4 class="example-title">Nama User</h4>
+                    <input type="text" class="form-control" id="inputPlaceholder" placeholder="Nama Karyawan" name="username">
+                    <h4 class="example-title">Password</h4>
+                    <input type="password" class="form-control" id="inputPlaceholder" name="password">
+                    <h4 class="example-title">Role</h4>
+                    <select class="form-control" id="inputPlaceholder" placeholder="Nama Karyawan" name="role_user">
+                        <option value = "">ADMIN</option>
+                        <option value = "">USER</option>
+                    </select>
+                    
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                    </div>
+            </form>
         </div>
     </div>
 </div>

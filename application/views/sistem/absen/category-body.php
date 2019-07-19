@@ -29,40 +29,42 @@
                 <h4 class="modal-title" id="exampleModalTitle">Absen</h4>
             </div>
             <div class="modal-body">
-                <h4 class="example-title">Tanggal</h4>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">
-                            <i class="icon wb-calendar" aria-hidden="true"></i>
-                        </span>
+                <form action="">
+                    <h4 class="example-title">Tanggal</h4>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="icon wb-calendar" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                        <input type="text" class="form-control" data-plugin="datepicker" id = "1" value = "<?php echo date("Y-m-d");?>">
                     </div>
-                    <input type="text" class="form-control" data-plugin="datepicker" id = "1" value = "<?php echo date("Y-m-d");?>">
+                    <div class="checkbox-custom checkbox-primary">
+                        <input type="checkbox" id="inputUnchecked" name = "karyawan1" />
+                        <label for="inputUnchecked">Herman</label>
+                    </div>
+                    <div class="checkbox-custom checkbox-primary">
+                        <input type="checkbox" id="inputUnchecked" name = "karyawan1"/>
+                        <label for="inputChecked">Budi</label>
+                    </div>
+                    <div class="checkbox-custom checkbox-primary">
+                        <input type="checkbox" id="inputUnchecked" name = "karyawan1" />
+                        <label for="inputUnchecked">Kelvin</label>
+                    </div>
+                    <div class="checkbox-custom checkbox-primary">
+                        <input type="checkbox" id="inputUnchecked" name = "karyawan1" />
+                        <label for="inputUnchecked">Ryan</label>
+                    </div>
+                    <div class="checkbox-custom checkbox-primary">
+                        <input type="checkbox" id="inputUnchecked" name = "karyawan1" />
+                        <label for="inputUnchecked">Rubin</label>
+                    </div>
                 </div>
-                <div class="checkbox-custom checkbox-primary">
-                    <input type="checkbox" id="inputUnchecked" name = "karyawan1" />
-                    <label for="inputUnchecked">Herman</label>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
                 </div>
-                <div class="checkbox-custom checkbox-primary">
-                    <input type="checkbox" id="inputUnchecked" name = "karyawan1"/>
-                    <label for="inputChecked">Budi</label>
-                </div>
-                <div class="checkbox-custom checkbox-primary">
-                    <input type="checkbox" id="inputUnchecked" name = "karyawan1" />
-                    <label for="inputUnchecked">Kelvin</label>
-                </div>
-                <div class="checkbox-custom checkbox-primary">
-                    <input type="checkbox" id="inputUnchecked" name = "karyawan1" />
-                    <label for="inputUnchecked">Ryan</label>
-                </div>
-                <div class="checkbox-custom checkbox-primary">
-                    <input type="checkbox" id="inputUnchecked" name = "karyawan1" />
-                    <label for="inputUnchecked">Rubin</label>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
-                <button type="button" class="btn btn-primary">Simpan</button>
-            </div>
+            </form>
         </div>
     </div>
 </div>
