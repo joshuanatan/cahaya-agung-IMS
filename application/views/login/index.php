@@ -62,7 +62,7 @@
 								</div>
 								
 							</div>
-							<a href="assets/pages/dashboard.php">
+							<a href="<?php echo base_url(); ?>/Dashboard">
 								<button type="button" class="btn btn-primary btn-block btn-lg mt-40">Sign in</button>
 							</a>
 						</form>

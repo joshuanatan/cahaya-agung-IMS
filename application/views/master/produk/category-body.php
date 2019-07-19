@@ -30,30 +30,32 @@
                 <h4 class="modal-title" id="exampleModalTitle">Tambah Data Barang</h4>
             </div>
             <div class="modal-body">
-                <h4 class="example-title">ID Submit Barang</h4>
-                <input type="text" class="form-control" id="inputPlaceholder" placeholder="90007" disabled>
-                <h4 class="example-title">Nama Barang</h4>
-                <input type="text" class="form-control" id="inputPlaceholder" placeholder="Nama Barang">
-                <h4 class="example-title">Stok</h4>
-                <input type="text" class="form-control" id="inputPlaceholder" placeholder="Stok Barang">
-                <h4 class="example-title">Satuan Barang</h4>
-                <input type="text" class="form-control" id="inputPlaceholder" placeholder="Satuan barang">
-                <h4 class="example-title">Harga Jual Barang</h4>
-                <input type="text" class="form-control" id="inputPlaceholder" placeholder="Harga Jual Barang">
-                <h4 class="example-title">Tanggal Masuk Barang</h4>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">
-                            <i class="icon wb-calendar" aria-hidden="true"></i>
-                        </span>
+                <form action="" method="post">
+                    <h4 class="example-title">ID Submit Barang</h4>
+                    <input type="text" class="form-control" id="inputPlaceholder" placeholder="90007" disabled>
+                    <h4 class="example-title">Nama Barang</h4>
+                    <input type="text" class="form-control" id="nama_barang" name="nama_barang" placeholder="Nama Barang">
+                    <h4 class="example-title">Stok</h4>
+                    <input type="text" class="form-control" id="stok" name="stok" placeholder="Stok Barang">
+                    <h4 class="example-title">Satuan Barang</h4>
+                    <input type="text" class="form-control" id="satuan_barang" name="satuan_barang" placeholder="Satuan barang">
+                    <h4 class="example-title">Harga Jual Barang</h4>
+                    <input type="text" class="form-control" id="harga_jual_barang" name="harga_jual_barang" placeholder="Harga Jual Barang">
+                    <h4 class="example-title">Tanggal Masuk Barang</h4>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="icon wb-calendar" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                        <input type="text" class="form-control" data-plugin="datepicker" name="tgl_masuk_barang">
                     </div>
-                    <input type="text" class="form-control" data-plugin="datepicker">
-                </div>
-                <br/>
-                <div class = "form-group">
-                    <button type="button" class="btn btn-primary">Simpan</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
-                </div>
+                    <br/>
+                    <div class= "form-group">
+                        <button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
