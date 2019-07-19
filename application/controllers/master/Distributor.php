@@ -21,23 +21,52 @@ class Distributor extends CI_Controller{
         $this->load->view("req/html-close");
     }
     public function index(){
+        /*
+        foreach($result as $a){
+            <tr>
+                <td>Nama Perusahaan</td>
+                <td>$a->nama_perusahaan</td>
+                <td>Nohp; Perusahaan</td>
+                <td>$a->nohp</td>
+            </tr>
+        }
+        foreach($result as $key=>$value){
+            <tr>
+                <td>echo $key</td> //tentang apa
+                <td>echo $value</td> //valuenya
+            </tr>
+        }
+        */
+        $where = array(
+            //"status_aktif_distributor" => 1
+        );
+        //$result =  selectRow("distributor",$where);
+        $field = array(
+            "nama_distributor","alamat_distributor"
+        );
+        $data = array(
+            //"distributor" => foreachMultipleResult($result,$field,$field)
+        );
         $this->req();
         $this->load->view("req/content-open");
         $this->load->view("master/distributor/category-header");
-        $this->load->view("master/distributor/category-body");
+        $this->load->view("master/distributor/category-body",$data);
         $this->load->view("req/content-close");
         $this->close();
     }
     public function insert(){
         $data = array(
-            "tabel1" => $this->input->post("name1")
+            "nama_distributor" => $this->input->post("nama_distributor"),
+            "alamat_distributor" => $this->input->post("alamat_distributor"),
+            "nama_distributor" => $this->input->post("nama_distributor"),
+            "nama_distributor" => $this->input->post("nama_distributor"),
         );
         insertRow("distributor",$data);
         redirect("master/distributor");
     }
-    public function update($id_submission_distributor){
+    public function update($id_submit_distributor){
         $where = array(
-            "id_submission_distributor" => $id_submission_distributor
+            "id_submit_distributor" => $id_submit_distributor
         );
         $data = array(
             "tabel1" => $this->input->post("name1")

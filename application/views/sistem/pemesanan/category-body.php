@@ -19,6 +19,7 @@
             </tr>
         </thead>
         <tbody>
+            <?php for($a = 0; $a<count($pemesanan); $a++):?>
             <tr>
                 <td></td>
                 <td></td>
@@ -26,10 +27,11 @@
                 <td></td>
                 <td></td>
                 <td>
-                    <button class = "btn btn-sm btn-primary" data-toggle="modal" data-target="#terimaBarang">PENERIMAAN</button>
+                    <button class = "btn btn-sm btn-primary" data-toggle="modal" data-target="#terimaBarang<?php echo $a;?>">PENERIMAAN</button>
                 </td>
                 <td></td>
             </tr>
+            <?php endfor;?>
         </tbody>
     </table>
 </div>
@@ -101,7 +103,9 @@
         </div>
     </div>
 </div>
-<div class = "modal fade" id = "terimaBarang">
+
+<?php for($a = 0; $a<count($pemesanan); $a++):?>
+<div class = "modal fade" id = "terimaBarang<?php echo $a;?>">
     <div class = "modal-dialog modal-lg">
         <div class = "modal-content">
             <div class = "modal-header">
@@ -119,18 +123,25 @@
                         <th>Barang Diterima</th>
                     </thead>
                     <tbody>
+                        <?php for($b = 0; $b<count($pemesanan[$a]); $b++):?>
                         <td></td>
                         <td></td>
                         <td>
-                            <button class = "btn btn-primary btn-sm" data-toggle="modal" data-target="#itemPenerimaan">DETAIL</button>
+                            <button class = "btn btn-primary btn-sm" data-toggle="modal" data-target="#itemPenerimaan<?php echo $b;?>">DETAIL</button>
                         </td>
+                        <?php endfor;?>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
 </div>
-<div class = "modal fade" id = "itemPenerimaan">
+<?php //endfor;?>
+
+
+<?php //for($a = 0; $a<count($pemesanan); $a++):?>
+<?php for($b = 0; $b<count($pemesanan[$a]); $b++):?>
+<div class = "modal fade" id = "itemPenerimaan<?php echo $b;?>">
     <div class = "modal-dialog modal-lg">
         <div class = "modal-content">
             <div class = "modal-header">
@@ -158,6 +169,9 @@
         </div>
     </div>
 </div>
+<?php endfor;?>
+<?php endfor;?>
+
 <div class = "modal fade" id = "tambahPenerimaanBarang">
     <div class = "modal-dialog modal-lg">
         <div class = "modal-content">
