@@ -28,6 +28,28 @@ class Distributor extends CI_Controller{
         $this->load->view("req/content-close");
         $this->close();
     }
-
+    public function insert(){
+        $data = array(
+            "tabel1" => $this->input->post("name1")
+        );
+        insertRow("distributor",$data);
+        redirect("master/distributor");
+    }
+    public function update($id_submission_distributor){
+        $where = array(
+            "id_submission_distributor" => $id_submission_distributor
+        );
+        $data = array(
+            "tabel1" => $this->input->post("name1")
+        );
+        updateRow("distributor",$data,$where);
+        redirect("master/distributor");
+    }
+    public function delete($id_submission_distributor){
+        $where = array(
+            "id_submission_distributor" => $id_submission_distributor
+        );
+        deleteRow("distributor",$where);
+    }
 }
 ?>
