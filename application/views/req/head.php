@@ -7,7 +7,7 @@
         <meta name="description" content="PT LEITER INDONESIA">
         <meta name="author" content="">
         
-        <title>PT. LEITER INDONESIA</title>
+        <title>TOKO BANGUNAN CAHAYA AGUNG</title>
         
         <link rel="apple-touch-icon" href="<?php echo base_url();?>assets/images/apple-touch-icon.png">
         <link rel="shortcut icon" href="<?php echo base_url();?>assets/images/favicon.ico">
