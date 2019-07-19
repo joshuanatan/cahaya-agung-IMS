@@ -8,7 +8,7 @@
     <meta name="description" content="bootstrap admin template">
     <meta name="author" content="">
     
-    <title>Dashboard Team | Remark Admin Template</title>
+    <title><?= $judul;?></title>
     
     <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
     <link rel="shortcut icon" href="../images/favicon.ico">
