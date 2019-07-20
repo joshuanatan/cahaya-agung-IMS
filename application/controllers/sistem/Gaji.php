@@ -65,5 +65,15 @@ class Gaji extends CI_Controller{
         $this->load->view("req/content-close");
         $this->close();
     }
+    public function pay(){
+        $data = array(
+            "id_submit_karyawan" => $this->input->post("id_submit_karyawan"),
+            "jumlah_gaji" => $this->input->post("jumlah_gaji"),
+            "bulan_gaji" => $this->input->post("bulan_gaji"),
+            "tahun_gaji" => $this->input->post("tahun_gaji"),
+        );
+        insertRow("gaji",$data);
+        redirect("sistem/gaji/index");
+    }
 }
 ?>

@@ -62,7 +62,9 @@
                     <?php endif;?>
                 </td>
                 <td>
-                    <button class = "btn btn-primary btn-sm btn-outline" data-toggle = "modal" data-target = "#bayarGaji<?php echo $a;?>">BAYAR GAJI</button>
+                    <?php if($karyawan[$a]["status_bayar"] == 1):?>
+                        <button class = "btn btn-primary btn-sm btn-outline" data-toggle = "modal" data-target = "#bayarGaji<?php echo $a;?>">BAYAR GAJI</button>
+                    <?php endif;?>
                 </td>
             </tr>
             
@@ -71,3 +73,35 @@
     </table>
     <?php endif;?>
 </div>
+
+
+<?php for($a = 0; $a<count($karyawan); $a++):?>
+<div class = "modal fade" id = "bayarGaji<?php echo $a;?>">
+    <div class = "modal-dialog modal-lg">
+        <div class = "modal-content">
+            <div class = "modal-header">
+                <h4 class = "modal-title">PEMBAYARAN GAJI</h4>
+            </div>
+            <div class = "modal-body">
+                <form action = "<?php echo base_url();?>sistem/gaji/pay" method = "POST">
+                    <h4 class="example-title">ID Karyawan</h4>
+                    <input type="text" class="form-control" name = "id_submit_karyawan" value = "<?php echo $karyawan[$a]["id_submit_karyawan"];?>" readonly>
+                    <h4 class="example-title">Nama Karyawan</h4>
+                    <input type="text" class="form-control" value = "<?php echo $karyawan[$a]["nama_karyawan"];?>" readonly>
+                    <h4 class="example-title">Jumlah Gaji</h4>
+                    <input type="text" class="form-control" name = "jumlah_gaji" value = "<?php echo $karyawan[$a]["gaji"];?>">
+                    <h4 class="example-title">Bulan Gaji</h4>
+                    <input type="text" class="form-control" name = "bulan_gaji" value = "<?php echo $bulan;?>" readonly>
+                    <h4 class="example-title">Tahun Gaji</h4>
+                    <input type="text" class="form-control" name = "tahun_gaji" value = "<?php echo $tahun;?>" readonly>
+                    <br/>
+                    <div class = "form-group">
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<?php endfor;?>
