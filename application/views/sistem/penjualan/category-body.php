@@ -42,35 +42,33 @@
                                     <th>#</th>
                                     <th>Nama Barang</th>
                                     <th>Jumlah</th>
-                                    <th>Harga Satuan Awal</th>
-                                    <th>Total Harga</th>
+                                    <th>Harga Satuan</th>
                                     <th>Harga Akhir</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                <?php// for($a=1;$a<=15;$a++) :?>
                                 <tr>
-                                    <td>1</td>
+                                    <td><?php// echo $a; ?></td>
                                     <td>
                                         <select class="form-control" data-plugin="select2" data-minimum-input-length="2" name="id_barang">
                                            
-                                            <option value="01">Semen</option>
-                                            <option >Cat</option>
-                                            <option >Pasir</option>
+                                            <option value="1">Semen</option>
+                                            <option value="2">Cat</option>
+                                            <option value="3" >Pasir</option>
                                         </select>
                                     </td>
                                     <td>
                                         <input type="text" class="form-control" id="inputPlaceholder" placeholder="60" name="jumlah_item_terjual">
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control" id="inputPlaceholder" placeholder="60" name="harga_satuan_awal" readonly>
-                                    </td>
-                                    <td>
-                                        <input type="text" class="form-control" id="inputPlaceholder" placeholder="60" name="total_harga" value="" readonly>
+                                        <input type="text" class="form-control" id="inputPlaceholder" placeholder="60" name="harga_satuan_awal">
                                     </td>
                                     <td>
                                         <input type="text" class="form-control" id="inputPlaceholder" placeholder="60" name="jumlah_uang_masuk">
                                     </td>
                                 </tr>
+                                <?php //endfor; ?>
                             </tbody>
                         </table>
                     </div>
@@ -83,3 +81,4 @@
         </div>
     </div>
 </div>
+
