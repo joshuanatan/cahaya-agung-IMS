@@ -30,7 +30,15 @@ class Absensi extends CI_Controller{
     }
 
     public function insert(){
-        
+        $data = [
+            'id_user_add' => 0
+        ];
+        foreach ($this->input->post('id_submit_karyawan') as $id) {
+            $data => substr(implode(', ', $id ), 0),
+        }
+
+        insertRow("absen", $data);
+        redirect('sistem/absensi');
     }
 }
 ?>

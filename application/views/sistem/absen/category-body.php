@@ -29,7 +29,7 @@
                 <h4 class="modal-title" id="exampleModalTitle">Absen</h4>
             </div>
             <div class="modal-body">
-                <form action="">
+                <form action="<?php echo base_url(); ?>sistem/absensi/insert" method="post">
                     <h4 class="example-title">Tanggal</h4>
                     <div class="input-group">
                         <div class="input-group-prepend">
@@ -40,24 +40,24 @@
                         <input type="text" class="form-control" data-plugin="datepicker" id = "1" value = "<?php echo date("Y-m-d");?>">
                     </div>
                     <div class="checkbox-custom checkbox-primary">
-                        <input type="checkbox" id="inputUnchecked" name = "karyawan1" />
+                        <input type="checkbox" id="inputUnchecked" value="01" name = "id_submit_karyawan[]" />
                         <label for="inputUnchecked">Herman</label>
                     </div>
                     <div class="checkbox-custom checkbox-primary">
-                        <input type="checkbox" id="inputUnchecked" name = "karyawan1"/>
-                        <label for="inputChecked">Budi</label>
+                        <input type="checkbox" id="inputUnchecked2" value="02" name = "id_submit_karyawan[]" />
+                        <label for="inputUnchecked2">Budi</label>
                     </div>
                     <div class="checkbox-custom checkbox-primary">
-                        <input type="checkbox" id="inputUnchecked" name = "karyawan1" />
-                        <label for="inputUnchecked">Kelvin</label>
+                        <input type="checkbox" id="inputUnchecked3" value="03" name = "id_submit_karyawan[]" />
+                        <label for="inputUnchecked3">Kelvin</label>
                     </div>
                     <div class="checkbox-custom checkbox-primary">
-                        <input type="checkbox" id="inputUnchecked" name = "karyawan1" />
-                        <label for="inputUnchecked">Ryan</label>
+                        <input type="checkbox" id="inputUnchecked4" value="04" name = "id_submit_karyawan[]" />
+                        <label for="inputUnchecked4">Ryan</label>
                     </div>
                     <div class="checkbox-custom checkbox-primary">
-                        <input type="checkbox" id="inputUnchecked" name = "karyawan1" />
-                        <label for="inputUnchecked">Rubin</label>
+                        <input type="checkbox" id="inputUnchecked5" value="05" name = "id_submit_karyawan[]" />
+                        <label for="inputUnchecked5">Rubin</label>
                     </div>
                 </div>
                 <div class="modal-footer">
