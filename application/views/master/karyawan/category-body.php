@@ -35,11 +35,12 @@
                 </td>
                 <td>
                     <?php if($a->status_aktif_karyawan == 0):?>
-                    <button class = "btn btn-sm btn-success">AKTIFKAN</button>
+                    <a href = "<?php echo base_url();?>master/karyawan/activate/<?php echo $a->id_submit_karyawan;?>" class = "btn btn-sm col-lg-12 btn-outline btn-success">AKTIFKAN</a>
                     <?php else:?> 
-                    <button class = "btn btn-sm btn-danger">NON AKTIFKAN</button>
+                    <a href = "<?php echo base_url();?>master/karyawan/deactive/<?php echo $a->id_submit_karyawan;?>" class = "btn btn-sm col-lg-12 btn-outline btn-danger">NON AKTIFKAN</a>
                     <?php endif;?>
-                    <button class = "btn btn-sm btn-primary" data-toggle = "modal" data-target = "#editKaryawan<?php echo $counter;?>">EDIT</button>
+                    <button class = "btn btn-sm col-lg-12 btn-outline btn-primary" data-toggle = "modal" data-target = "#editKaryawan<?php echo $counter;?>">EDIT</button>
+                    <a href = "<?php echo base_url();?>master/karyawan/delete/<?php echo $a->id_submit_karyawan;?>" class = "btn btn-sm col-lg-12 btn-outline btn-danger">HAPUS</a>
                 </td>
             </tr>
             <?php $counter++; endforeach;?>
