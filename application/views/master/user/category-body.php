@@ -30,11 +30,12 @@
                 </td>
                 <td>
                 <?php if($user[$a]["status_aktif_user"] == 0):?>
-                    <button class = "btn btn-sm btn-success">AKTIFKAN</button>
+                    <a href = "<?php echo base_url();?>master/user/activate/<?php echo $user[$a]["id_submit_user"];?>" class = "btn btn-sm btn-success">AKTIFKAN</a>
                     <?php else:?> 
-                    <button class = "btn btn-sm btn-danger">NON AKTIFKAN</button>
+                    <a href = "<?php echo base_url();?>master/user/deactive/<?php echo $user[$a]["id_submit_user"];?>" class = "btn btn-sm btn-danger">NON AKTIFKAN</a>
                     <?php endif;?>
                     <button class = "btn btn-sm btn-primary" data-toggle = "modal" data-target = "#editUser<?php echo $a;?>">EDIT</button>
+                    <a href = "<?php echo base_url();?>master/user/delete/<?php echo $user[$a]["id_submit_user"];?>" class = "btn btn-sm btn-danger">HAPUS</a>
                 </td>
             </tr>
             <?php endfor;?>
