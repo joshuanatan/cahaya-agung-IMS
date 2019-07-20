@@ -22,6 +22,7 @@ class Distributor extends CI_Controller{
     }
     public function index(){
         $where = array(
+            "delete_row" => 1
         );
         $result =  selectRow("distributor",$where);
         $field = array(
@@ -50,21 +51,52 @@ class Distributor extends CI_Controller{
         insertRow("distributor",$data);
         redirect("master/distributor");
     }
-    public function update($id_submit_distributor){
+    public function update(){
         $where = array(
-            "id_submit_distributor" => $id_submit_distributor
+            "id_submit_distributor" => $this->input->post("id_submit_distributor")
         );
         $data = array(
-            "tabel1" => $this->input->post("name1")
+            "nama_distributor" => $this->input->post("nama_distributor"),
+            "alamat_distributor" => $this->input->post("alamat_distributor"),
+            "notelp_distributor" => $this->input->post("notelp_distributor"),
+            "tgl_tambah_distributor" => $this->input->post("tgl_tambah_distributor"),
+            "nama_pic" => $this->input->post("nama_pic"),
+            "nohp_pic" => $this->input->post("nohp_pic"),
         );
         updateRow("distributor",$data,$where);
         redirect("master/distributor");
     }
-    public function delete($id_submission_distributor){
+    
+    public function activate($id_submit_distributor){
         $where = array(
-            "id_submission_distributor" => $id_submission_distributor
+            "id_submit_distributor" => $id_submit_distributor
         );
-        deleteRow("distributor",$where);
+        $data = array(
+            "status_aktif_distributor" => 1
+        );
+        updateRow("distributor",$data,$where);
+        redirect("master/distributor");
+
+    }
+    public function deactive($id_submit_distributor){
+        $where = array(
+            "id_submit_distributor" => $id_submit_distributor
+        );
+        $data = array(
+            "status_aktif_distributor" => 0
+        );
+        updateRow("distributor",$data,$where);
+        redirect("master/distributor");
+    }
+    public function delete($id_submit_distributor){
+        $where = array(
+            "id_submit_distributor" => $id_submit_distributor
+        );
+        $data = array(
+            "delete_row" => 0
+        );
+        updateRow("distributor",$data,$where);
+        redirect("master/distributor");
     }
 }
 ?>

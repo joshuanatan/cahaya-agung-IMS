@@ -22,7 +22,7 @@ class User extends CI_Controller{
     }
     public function index(){
         $where = array(
-            
+            "delete_row" => 1
         );
         $result = selectRow("user",$where);
         $field = array(
@@ -38,14 +38,66 @@ class User extends CI_Controller{
     }
 
     public function insert(){
-        $data = array(
-            'username' => $this->input->post('username') , 
+        $data = array( 
+            'username' => $this->input->post('username') ,
             'password' => $this->input->post('password') ,
             'role_user' => $this->input->post('role_user') 
         );
 
         insertRow('user', $data);
         redirect('master/user');
+    }
+    public function update(){
+        $where = array(
+            "id_submit_user" => $this->input->post("id_submit_user")
+        );
+        $data = array();
+        if($this->input->post("password") == ""){
+            $data = array(
+                'username' => $this->input->post('username'),
+                'role_user' => $this->input->post('role_user') 
+            );
+        } 
+        else{
+            $data = array( 
+                'username' => $this->input->post('username') ,
+                'password' => $this->input->post('password') ,
+                'role_user' => $this->input->post('role_user') 
+            );
+        }
+        updateRow("user",$data,$where);
+        redirect('master/user');
+    }
+    public function activate($id_submit_user){
+        $where = array(
+            "id_submit_user" => $id_submit_user
+        );
+        $data = array(
+            "status_aktif_user" => 1
+        );
+        updateRow("user",$data,$where);
+        redirect("master/user");
+
+    }
+    public function deactive($id_submit_user){
+        $where = array(
+            "id_submit_user" => $id_submit_user
+        );
+        $data = array(
+            "status_aktif_user" => 0
+        );
+        updateRow("user",$data,$where);
+        redirect("master/user");
+    }
+    public function delete($id_submit_user){
+        $where = array(
+            "id_submit_user" => $id_submit_user
+        );
+        $data = array(
+            "delete_row" => 0
+        );
+        updateRow("user",$data,$where);
+        redirect("master/user");
     }
 }
 ?>
