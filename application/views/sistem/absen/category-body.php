@@ -40,23 +40,23 @@
                         <input type="text" class="form-control" data-plugin="datepicker" id = "1" value = "<?php echo date("Y-m-d");?>">
                     </div>
                     <div class="checkbox-custom checkbox-primary">
-                        <input type="checkbox" id="inputUnchecked" value="01" name = "id_submit_karyawan[]" />
+                        <input type="checkbox" id="inputUnchecked" value="1" name = "id_submit_karyawan[]" />
                         <label for="inputUnchecked">Herman</label>
                     </div>
                     <div class="checkbox-custom checkbox-primary">
-                        <input type="checkbox" id="inputUnchecked2" value="02" name = "id_submit_karyawan[]" />
+                        <input type="checkbox" id="inputUnchecked2" value="2" name = "id_submit_karyawan[]" />
                         <label for="inputUnchecked2">Budi</label>
                     </div>
                     <div class="checkbox-custom checkbox-primary">
-                        <input type="checkbox" id="inputUnchecked3" value="03" name = "id_submit_karyawan[]" />
+                        <input type="checkbox" id="inputUnchecked3" value="3" name = "id_submit_karyawan[]" />
                         <label for="inputUnchecked3">Kelvin</label>
                     </div>
                     <div class="checkbox-custom checkbox-primary">
-                        <input type="checkbox" id="inputUnchecked4" value="04" name = "id_submit_karyawan[]" />
+                        <input type="checkbox" id="inputUnchecked4" value="4" name = "id_submit_karyawan[]" />
                         <label for="inputUnchecked4">Ryan</label>
                     </div>
                     <div class="checkbox-custom checkbox-primary">
-                        <input type="checkbox" id="inputUnchecked5" value="05" name = "id_submit_karyawan[]" />
+                        <input type="checkbox" id="inputUnchecked5" value="5" name = "id_submit_karyawan[]" />
                         <label for="inputUnchecked5">Rubin</label>
                     </div>
                 </div>

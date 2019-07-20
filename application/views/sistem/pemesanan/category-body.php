@@ -46,60 +46,64 @@
                 <h4 class="modal-title" id="exampleModalTitle">Penjualan</h4>
             </div>
             <div class="modal-body">
-                <h4 class="example-title">ID Submit  Pemesanan</h4>
-                <input type="text" class="form-control" id="inputPlaceholder" placeholder="500003"  disabled>
-                <h4 class="example-title">Nama Distributor</h4>
-                <select class="form-control" data-plugin="select2" data-minimum-input-length="2">
-                    <option >Distributor Hezaar</option>
-                    <option >Distributor Verdy</option>
-                    <option >Distributor Hiber</option>
-                </select>
-                <h4 class="example-title">Tanggal Masuk Pemesanan</h4>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">
-                            <i class="icon wb-calendar" aria-hidden="true"></i>
-                        </span>
-                    </div>
-                    <input type="text" class="form-control" data-plugin="datepicker">
-                </div>    
-                <br/>
-                <table class="table table-bordered" style="text-align:center;">
-                    <thead>
-                        <tr>
-                            <th> # </th>
-                            <th>Nama Barang</th>
-                            <th>Jumlah</th>
-                            <th>Harga</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <div class="checkbox-custom checkbox-primary">
-                                    <input type="checkbox" id="inputUnchecked"/>
-                                    <label for="inputUnchecked"></label>
-                                </div>              
-                            </td>
-                            <td>
-                                <select class="form-control" data-plugin="select2">
-                                <option >Semen</option>
-                                <option >Cat</option>
-                                <option >Pasir</option>
-                                </select>
-                            </td>
-                            <td>
-                                <input type="text" class="form-control" id="inputPlaceholder" placeholder="Jumlah Barang">
-                            </td>
-                            <td>1500000</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
-                <button type="button" class="btn btn-primary">Simpan</button>
-            </div>
+                <form action="<?php echo base_url(); ?>sistem/restok/insert" method="post">
+                    <h4 class="example-title">ID Submit  Pemesanan</h4>
+                    <input type="text" class="form-control" id="inputPlaceholder" placeholder="500003"  disabled>
+                    <h4 class="example-title">Nama Distributor</h4>
+                    <select class="form-control" data-plugin="select2" data-minimum-input-length="2" name="id_submit_distributor">
+                        <option value="1">Distributor Hezaar</option>
+                        <option value="2">Distributor Verdy</option>
+                        <option value="3">Distributor Hiber</option>
+                    </select>
+                    <h4 class="example-title">Tanggal Masuk Pemesanan</h4>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="icon wb-calendar" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                        <input type="text" class="form-control" data-plugin="datepicker" name="tgl_pemesanan">
+                    </div>    
+                    <br/>
+                    <table class="table table-bordered" style="text-align:center;">
+                        <thead>
+                            <tr>
+                                <th> # </th>
+                                <th>Nama Barang</th>
+                                <th>Jumlah</th>
+                                <th>Harga</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="checkbox-custom checkbox-primary">
+                                        <input type="checkbox" id="inputUnchecked"/>
+                                        <label for="inputUnchecked"></label>
+                                    </div>              
+                                </td>
+                                <td>
+                                    <select class="form-control" data-plugin="select2" name="id_barang">
+                                        <option value="1">Semen</option>
+                                        <option value="2">Cat</option>
+                                        <option value="3">Pasir</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" id="inputPlaceholder" placeholder="Jumlah Barang" name="jumlah_item_pemesanan">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" id="inputPlaceholder" placeholder="Harga Barang" name="harga_item_pemesanan" value="1500000" readonly>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
