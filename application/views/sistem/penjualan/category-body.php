@@ -33,7 +33,7 @@
             </div>
             <div class="modal-body">
                 <form action="<?php echo base_url(); ?>sistem/penjualan/insert" method="post">
-                    <h4 class="example-title">ID Submit  Penjualan</h4>
+                    <h4 class="example-title">ID Submit Penjualan</h4>
                     <input type="text" class="form-control" id="inputPlaceholder" placeholder="90001" disabled>
                     <div class="example table-responsive">
                         <table class="table table-bordered" style="text-align:center;">
@@ -42,7 +42,8 @@
                                     <th>#</th>
                                     <th>Nama Barang</th>
                                     <th>Jumlah</th>
-                                    <th>Harga Satuan</th>
+                                    <th>Harga Satuan Awal</th>
+                                    <th>Total Harga</th>
                                     <th>Harga Akhir</th>
                                 </tr>
                             </thead>
@@ -61,7 +62,10 @@
                                         <input type="text" class="form-control" id="inputPlaceholder" placeholder="60" name="jumlah_item_terjual">
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control" id="inputPlaceholder" placeholder="60" name="jumlah_terjual">
+                                        <input type="text" class="form-control" id="inputPlaceholder" placeholder="60" name="harga_satuan_awal" readonly>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control" id="inputPlaceholder" placeholder="60" name="total_harga" value="" readonly>
                                     </td>
                                     <td>
                                         <input type="text" class="form-control" id="inputPlaceholder" placeholder="60" name="jumlah_uang_masuk">

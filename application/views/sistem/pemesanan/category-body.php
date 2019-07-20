@@ -140,10 +140,10 @@
         </div>
     </div>
 </div>
-<?php //endfor;?>
+<?php endfor;?>
 
 
-<?php //for($a = 0; $a<count($pemesanan); $a++):?>
+<?php for($a = 0; $a<count($pemesanan); $a++):?>
 <?php for($b = 0; $b<count($pemesanan[$a]); $b++):?>
 <div class = "modal fade" id = "itemPenerimaan<?php echo $b;?>">
     <div class = "modal-dialog modal-lg">

@@ -30,7 +30,23 @@ class Penjualan extends CI_Controller{
     }
 
     public function insert(){
-        
+        $data = array(
+           'tgl_penjualan' => $this->input->post('tgl_penjualan'),
+           'jumlah_item_terjual' => $this->input->post('jumlah_item_terjual'),
+           'jumlah_uang_masuk' => $this->input->post('jumlah_uang_masuk'),
+           'id_user_add' => 0
+        );
+
+        $result = insertRow("penjualan", $data);
+        $data2 = array(
+            'id_barang' => $this->input->post('id_barang') , 
+            'jumlah_terjual' => $this->input->post('jumlah_item_terjual') , 
+            'harga_jual' => $this->input->post('jumlah_uang_masuk') , 
+            'id_submit_penjualan' => $this->input->post('id_submit_penjualan') , 
+            'id_user_add' => 0
+        );
+        insertRow('item_penjualan', $data2);
+        redirect('sistem/penjualan');
     }
 
 }
