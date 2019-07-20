@@ -139,6 +139,16 @@ class Restok extends CI_Controller{
                 "id_user_add" => 0
             );
             insertRow("item_penerimaan_barang",$data);
+
+            $id_submit_barang = get1Value("item_pemesanan_barang","id_barang",array("id_submit_item_pemesanan" => $this->input->post("id_submit_item_pemesanan".$a)));
+            $jumlah_stok = get1Value("barang","stok",array("id_submit_barang" => $id_submit_barang));
+            $data = array(
+                "stok" => $jumlah_stok + $this->input->post("jumlah_terima".$a)
+            );
+            $where = array(
+                "id_submit_barang" => $id_submit_barang
+            );
+            updateRow("barang",$data,$where);
         }
         redirect("sistem/restok");
     }
