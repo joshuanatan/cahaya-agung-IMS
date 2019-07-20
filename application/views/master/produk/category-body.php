@@ -34,11 +34,12 @@
                 </td>
                 <td>
                 <?php if($barang[$a]["status_aktif_barang"] == 0):?>
-                    <button class = "btn btn-sm btn-success">AKTIFKAN</button>
+                    <a href = "<?php echo base_url();?>master/produk/activate/<?php echo $barang[$a]["id_submit_barang"] ;?>" class = "btn btn-sm col-lg-12 btn-outline btn-success">AKTIFKAN</a>
                     <?php else:?> 
-                    <button class = "btn btn-sm btn-danger">NON AKTIFKAN</button>
+                    <a href = "<?php echo base_url();?>master/produk/deactive/<?php echo $barang[$a]["id_submit_barang"] ;?>" class = "btn btn-sm col-lg-12 btn-outline btn-danger">NON AKTIFKAN</a>
                     <?php endif;?>
-                    <button class = "btn btn-sm btn-primary" data-toggle = "modal" data-target = "#editBarang<?php echo $a;?>">EDIT</button>
+                    <button class = "btn btn-sm col-lg-12 btn-outline btn-primary" data-toggle = "modal" data-target = "#editBarang<?php echo $a;?>">EDIT</button>
+                    <a href = "<?php echo base_url();?>master/produk/delete/<?php echo $barang[$a]["id_submit_barang"];?>" class = "btn btn-sm col-lg-12 btn-outline btn-danger">HAPUS</a>
                 </td>
             </tr>
             <?php endfor;?>
