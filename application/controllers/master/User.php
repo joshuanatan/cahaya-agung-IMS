@@ -21,10 +21,18 @@ class User extends CI_Controller{
         $this->load->view("req/html-close");
     }
     public function index(){
+        $where = array(
+            
+        );
+        $result = selectRow("user",$where);
+        $field = array(
+            "id_submit_user","username","role_user","status_aktif_user"
+        );
+        $data["user"] = foreachMultipleResult($result,$field,$field);
         $this->req();
         $this->load->view("req/content-open");
         $this->load->view("master/user/category-header");
-        $this->load->view("master/user/category-body");
+        $this->load->view("master/user/category-body",$data);
         $this->load->view("req/content-close");
         $this->close();
     }

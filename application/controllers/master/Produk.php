@@ -43,7 +43,6 @@ class Produk extends CI_Controller{
             "stok" => $this->input->post('stok'),
             "satuan_barang" => $this->input->post('satuan_barang'),
             "harga_jual_barang" => $this->input->post('harga_jual_barang'),
-            "tgl_masuk_barang" => $this->input->post('tgl_masuk_barang'),
             "status_aktif_barang" => 1,
             "id_user_add" =>  0
         );

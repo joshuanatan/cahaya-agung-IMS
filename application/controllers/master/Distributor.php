@@ -45,7 +45,6 @@ class Distributor extends CI_Controller{
             "nama_pic" => $this->input->post("nama_pic"),
             "nohp_pic" => $this->input->post("nohp_pic"),
             "status_aktif_distributor" => 1,
-            "tgl_tambah_distributor" => $this->input->post("tgl_tambah_distributor"),
             "id_user_add" => 0
         );
         insertRow("distributor",$data);
