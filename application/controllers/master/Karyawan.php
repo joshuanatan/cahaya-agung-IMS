@@ -22,6 +22,7 @@ class Karyawan extends CI_Controller{
     }
     public function index(){
         $where = array(
+            "delete_row" => 1
         );
         $data["karyawan"] = selectRow("karyawan",$where);
         
@@ -56,6 +57,38 @@ class Karyawan extends CI_Controller{
             "tgl_masuk_karyawan" => $this->input->post('tgl_masuk_karyawan'),
             "gaji_perjam" => $this->input->post('gaji_perjam'),
             "nohp_karyawan" => $this->input->post('nohp_karyawan'),
+        );
+        updateRow("karyawan",$data,$where);
+        redirect("master/karyawan");
+    }
+    
+    public function activate($id_submit_karyawan){
+        $where = array(
+            "id_submit_karyawan" => $id_submit_karyawan
+        );
+        $data = array(
+            "status_aktif_karyawan" => 1
+        );
+        updateRow("karyawan",$data,$where);
+        redirect("master/karyawan");
+
+    }
+    public function deactive($id_submit_karyawan){
+        $where = array(
+            "id_submit_karyawan" => $id_submit_karyawan
+        );
+        $data = array(
+            "status_aktif_karyawan" => 0
+        );
+        updateRow("karyawan",$data,$where);
+        redirect("master/karyawan");
+    }
+    public function delete($id_submit_karyawan){
+        $where = array(
+            "id_submit_karyawan" => $id_submit_karyawan
+        );
+        $data = array(
+            "delete_row" => 0
         );
         updateRow("karyawan",$data,$where);
         redirect("master/karyawan");

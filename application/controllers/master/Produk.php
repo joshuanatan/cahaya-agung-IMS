@@ -22,7 +22,7 @@ class Produk extends CI_Controller{
     }
     public function index(){
         $where = array(
-
+            "delete_row" => 1
         );
         $result = selectRow("barang",$where);
         $field = array(
@@ -59,6 +59,37 @@ class Produk extends CI_Controller{
             "satuan_barang" => $this->input->post('satuan_barang'),
             "harga_jual_barang" => $this->input->post('harga_jual_barang'),
             "tgl_masuk_barang" => $this->input->post('tgl_masuk_barang'),
+        );
+        updateRow("barang",$data,$where);
+        redirect("master/produk");
+    }
+    public function activate($id_submit_barang){
+        $where = array(
+            "id_submit_barang" => $id_submit_barang
+        );
+        $data = array(
+            "status_aktif_barang" => 1
+        );
+        updateRow("barang",$data,$where);
+        redirect("master/produk");
+
+    }
+    public function deactive($id_submit_barang){
+        $where = array(
+            "id_submit_barang" => $id_submit_barang
+        );
+        $data = array(
+            "status_aktif_barang" => 0
+        );
+        updateRow("barang",$data,$where);
+        redirect("master/produk");
+    }
+    public function delete($id_submit_barang){
+        $where = array(
+            "id_submit_barang" => $id_submit_barang
+        );
+        $data = array(
+            "delete_row" => 0
         );
         updateRow("barang",$data,$where);
         redirect("master/produk");

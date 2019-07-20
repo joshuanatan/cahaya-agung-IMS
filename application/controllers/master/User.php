@@ -22,7 +22,7 @@ class User extends CI_Controller{
     }
     public function index(){
         $where = array(
-            
+            "delete_row" => 1
         );
         $result = selectRow("user",$where);
         $field = array(
@@ -67,6 +67,37 @@ class User extends CI_Controller{
         }
         updateRow("user",$data,$where);
         redirect('master/user');
+    }
+    public function activate($id_submit_user){
+        $where = array(
+            "id_submit_user" => $id_submit_user
+        );
+        $data = array(
+            "status_aktif_user" => 1
+        );
+        updateRow("user",$data,$where);
+        redirect("master/user");
+
+    }
+    public function deactive($id_submit_user){
+        $where = array(
+            "id_submit_user" => $id_submit_user
+        );
+        $data = array(
+            "status_aktif_user" => 0
+        );
+        updateRow("user",$data,$where);
+        redirect("master/user");
+    }
+    public function delete($id_submit_user){
+        $where = array(
+            "id_submit_user" => $id_submit_user
+        );
+        $data = array(
+            "delete_row" => 0
+        );
+        updateRow("user",$data,$where);
+        redirect("master/user");
     }
 }
 ?>
