@@ -21,10 +21,39 @@ class Absensi extends CI_Controller{
         $this->load->view("req/html-close");
     }
     public function index(){
+        $where = array(
+            "status_aktif_karyawan" => 1
+        );
+        $result = selectRow("karyawan",$where);
+        $field = array(
+            "id_submit_karyawan","nama_karyawan"
+        );
+        $data["karyawan"] = foreachMultipleResult($result,$field,$field);
+
+        $where = array(
+
+        );
+        $this->load->model("Mdabsen");
+        $result = $this->Mdabsen->selectAbsenThisMonth($where);
+        $field = array(
+            "tgl_absen"
+        );
+        $data["absen"] = foreachMultipleResult($result,$field,$field);
+        for($a = 0; $a<count($data["absen"]); $a++){
+            $data["absen"][$a]["jumlah_masuk"] = getAmount("absen","id_submit_absen",array("tgl_absen" => $data["absen"][$a]["tgl_absen"]));
+            $result = selectRow("absen",array("tgl_absen" => $data["absen"][$a]["tgl_absen"]));
+            $field = array(
+                "id_submit_karyawan"
+            );
+            $data["absen"][$a]["karyawan"] = foreachMultipleResult($result,$field,$field);
+            for($b = 0; $b<count($data["absen"][$a]["karyawan"]); $b++){
+                $data["absen"][$a]["karyawan"][$b]["nama_karyawan"] = get1Value("karyawan","nama_karyawan",array("id_submit_karyawan" => $data["absen"][$a]["karyawan"][$b]["id_submit_karyawan"]));
+            }
+        }
         $this->req();
         $this->load->view("req/content-open");
         $this->load->view("sistem/absen/category-header");
-        $this->load->view("sistem/absen/category-body");
+        $this->load->view("sistem/absen/category-body",$data);
         $this->load->view("req/content-close");
         $this->close();
     }
@@ -34,6 +63,7 @@ class Absensi extends CI_Controller{
         
         foreach($hadir as $a){
             $data = array(
+                "tgl_absen" => $this->input->post("tgl_absen"),
                 'id_submit_karyawan'=>$a
             );
             
@@ -42,6 +72,23 @@ class Absensi extends CI_Controller{
         $data['id_user_add'] = 0;
 
         
+        redirect('sistem/absensi');
+    }
+    public function updateKaryawanHadir(){
+        $where = array(
+            "tgl_absen" => $this->input->post("tgl_absen")
+        );
+        deleteRow("absen",$where);
+        $hadir = $this->input->post('id_submit_karyawan');
+        
+        foreach($hadir as $a){
+            $data = array(
+                "tgl_absen" => $this->input->post("tgl_absen"),
+                'id_submit_karyawan'=>$a
+            );
+            
+            insertRow("absen", $data);
+        }
         redirect('sistem/absensi');
     }
 }

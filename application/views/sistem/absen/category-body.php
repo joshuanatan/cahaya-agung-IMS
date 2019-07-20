@@ -10,15 +10,51 @@
         <thead>
             <th>Tanggal Absensi</th>
             <th>Jumlah Karyawan Hadir</th>
+            <th>List Karyawan Hadir</th>
             <th>Action</th>
         </thead>
         <tbody>
-            
+            <?php for($a = 0; $a<count($absen); $a++):?>
+            <tr>
+                <td><?php $date = date_create($absen[$a]["tgl_absen"]); echo date_format($date,"D d-m-Y");?></td>
+                <td><?php echo $absen[$a]["jumlah_masuk"];?></td>
+                <td><button class = "btn btn-primary btn-sm" data-toggle="modal" data-target="#karyawanHadir<?php echo $a;?>">Karyawan</button></td>
+                <td></td>
+            </tr>
+            <?php endfor;?>
         </tbody>
     </table>
 </div>
- 
-        
+<?php for($a = 0; $a<count($absen); $a++):?>
+<div class="modal fade" id="karyawanHadir<?php echo $a;?>" aria-hidden="true" aria-labelledby="examplePositionCenter" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-simple modal-center">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title" id="exampleModalTitle">Absen</h4>
+            </div>
+            <div class="modal-body">
+                <form action="<?php echo base_url(); ?>sistem/absensi/updateKaryawanHadir" method="post">
+                    <input type="hidden" class="form-control" name = "tgl_absen" value = "<?php echo date("Y-m-d");?>">
+                    <?php for($b = 0; $b<count($absen[$a]["karyawan"]); $b++):?>
+                    <div class="checkbox-custom checkbox-primary">
+                        <input type="checkbox" id="inputUnchecked" value="<?php echo $karyawan[$b]["id_submit_karyawan"] ;?>" name = "id_submit_karyawan[]" <?php if($absen[$a]["karyawan"][$b]["id_submit_karyawan"] == $karyawan[$b]["id_submit_karyawan"]) echo "checked"; ?> />
+                        <label for="inputUnchecked"><?php echo $absen[$a]["karyawan"][$b]["nama_karyawan"];?></label>
+                    </div>
+                    <?php endfor;?>
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<?php endfor;?>        
 <div class="modal fade" id="tambahabsen" aria-hidden="true" aria-labelledby="examplePositionCenter" role="dialog" tabindex="-1">
     <div class="modal-dialog modal-simple modal-center">
         <div class="modal-content">
@@ -31,34 +67,14 @@
             <div class="modal-body">
                 <form action="<?php echo base_url(); ?>sistem/absensi/insert" method="post">
                     <h4 class="example-title">Tanggal</h4>
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">
-                                <i class="icon wb-calendar" aria-hidden="true"></i>
-                            </span>
-                        </div>
-                        <input type="text" class="form-control" data-plugin="datepicker" id = "1" value = "<?php echo date("Y-m-d");?>">
-                    </div>
+                    <input type="date" class="form-control" name = "tgl_absen" value = "<?php echo date("Y-m-d");?>">
+                    <?php for($b = 0; $b<count($karyawan); $b++):?>
                     <div class="checkbox-custom checkbox-primary">
-                        <input type="checkbox" id="inputUnchecked" value="1" name = "id_submit_karyawan[]" />
-                        <label for="inputUnchecked">Herman</label>
+                        <input type="checkbox" id="inputUnchecked" value="<?php echo $karyawan[$b]["id_submit_karyawan"] ;?>" name = "id_submit_karyawan[]" />
+                        <label for="inputUnchecked"><?php echo $karyawan[$b]["nama_karyawan"];?></label>
                     </div>
-                    <div class="checkbox-custom checkbox-primary">
-                        <input type="checkbox" id="inputUnchecked2" value="2" name = "id_submit_karyawan[]" />
-                        <label for="inputUnchecked2">Budi</label>
-                    </div>
-                    <div class="checkbox-custom checkbox-primary">
-                        <input type="checkbox" id="inputUnchecked3" value="3" name = "id_submit_karyawan[]" />
-                        <label for="inputUnchecked3">Kelvin</label>
-                    </div>
-                    <div class="checkbox-custom checkbox-primary">
-                        <input type="checkbox" id="inputUnchecked4" value="4" name = "id_submit_karyawan[]" />
-                        <label for="inputUnchecked4">Ryan</label>
-                    </div>
-                    <div class="checkbox-custom checkbox-primary">
-                        <input type="checkbox" id="inputUnchecked5" value="5" name = "id_submit_karyawan[]" />
-                        <label for="inputUnchecked5">Rubin</label>
-                    </div>
+                    <?php endfor;?>
+                    
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary">Simpan</button>
