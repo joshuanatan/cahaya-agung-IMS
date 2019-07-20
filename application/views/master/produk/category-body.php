@@ -8,15 +8,28 @@
     </div>
     <table class="table table-bordered table-hover table-striped w-full" cellspacing="0" data-plugin = "dataTable">
         <thead>
-            <th>ID Submit Penjualan</th>
-            <th>Tanggal Penjualan</th>
-            <th>Jumlah Item Terjual</th>
-            <th>Jumlah Uang Masuk</th>
-            <th>ID User Add</th>
+            <th>ID Submit Barang</th>
+            <th>Nama Barang</th>
+            <th>Stok</th>
+            <th>Satuan Barang</th>
+            <th>Harga Jual Barang</th>
+            <th>Tanggal Masuk Barang</th>
+            <th>Status Aktif Barang</th>
             <th class="text-nowrap">Action</th>
         </thead>
         <tbody>
-            
+            <?php for($a = 0; $a<count($barang); $a++):?>
+            <tr>
+                <td><?php echo $barang[$a]["id_submit_barang"];?></td>
+                <td><?php echo $barang[$a]["nama_barang"];?></td>
+                <td><?php echo $barang[$a]["stok"];?></td>
+                <td><?php echo $barang[$a]["satuan_barang"];?></td>
+                <td><?php echo $barang[$a]["harga_jual_barang"];?></td>
+                <td><?php echo $barang[$a]["tgl_masuk_barang"];?></td>
+                <td><?php echo $barang[$a]["status_aktif_barang"];?></td>
+                <td><?php echo $barang[$a]["status_aktif_barang"];?></td>
+            </tr>
+            <?php endfor;?>
         </tbody>
     </table>
 </div>

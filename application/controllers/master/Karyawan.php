@@ -21,10 +21,14 @@ class Karyawan extends CI_Controller{
         $this->load->view("req/html-close");
     }
     public function index(){
+        $where = array(
+        );
+        $data["karyawan"] = selectRow("karyawan",$where);
+
         $this->req();
         $this->load->view("req/content-open");
         $this->load->view("master/karyawan/category-header");
-        $this->load->view("master/karyawan/category-body");
+        $this->load->view("master/karyawan/category-body",$data);
         $this->load->view("req/content-close");
         $this->close();
     }

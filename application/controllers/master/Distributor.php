@@ -21,31 +21,14 @@ class Distributor extends CI_Controller{
         $this->load->view("req/html-close");
     }
     public function index(){
-        /*
-        foreach($result as $a){
-            <tr>
-                <td>Nama Perusahaan</td>
-                <td>$a->nama_perusahaan</td>
-                <td>Nohp; Perusahaan</td>
-                <td>$a->nohp</td>
-            </tr>
-        }
-        foreach($result as $key=>$value){
-            <tr>
-                <td>echo $key</td> //tentang apa
-                <td>echo $value</td> //valuenya
-            </tr>
-        }
-        */
         $where = array(
-            //"status_aktif_distributor" => 1
         );
-        //$result =  selectRow("distributor",$where);
+        $result =  selectRow("distributor",$where);
         $field = array(
-            "nama_distributor","alamat_distributor"
+            "id_submit_distributor","nama_distributor","alamat_distributor","notelp_distributor","nama_pic","nohp_pic","status_aktif_distributor","tgl_tambah_distributor"
         );
         $data = array(
-            //"distributor" => foreachMultipleResult($result,$field,$field)
+            "distributor" => foreachMultipleResult($result,$field,$field)
         );
         $this->req();
         $this->load->view("req/content-open");
