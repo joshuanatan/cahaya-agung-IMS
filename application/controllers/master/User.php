@@ -94,7 +94,8 @@ class User extends CI_Controller{
             "id_submit_user" => $id_submit_user
         );
         $data = array(
-            "delete_row" => 0
+            "delete_row" => 0,
+            "status_aktif_user" => 0
         );
         updateRow("user",$data,$where);
         redirect("master/user");

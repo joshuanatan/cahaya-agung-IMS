@@ -89,7 +89,8 @@ class Produk extends CI_Controller{
             "id_submit_barang" => $id_submit_barang
         );
         $data = array(
-            "delete_row" => 0
+            "delete_row" => 0,
+            "status_aktif_barang" => 0
         );
         updateRow("barang",$data,$where);
         redirect("master/produk");

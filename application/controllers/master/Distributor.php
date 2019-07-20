@@ -93,7 +93,8 @@ class Distributor extends CI_Controller{
             "id_submit_distributor" => $id_submit_distributor
         );
         $data = array(
-            "delete_row" => 0
+            "delete_row" => 0,
+            "status_aktif_distributor" => 0
         );
         updateRow("distributor",$data,$where);
         redirect("master/distributor");

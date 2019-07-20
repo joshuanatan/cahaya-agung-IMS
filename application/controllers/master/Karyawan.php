@@ -88,7 +88,8 @@ class Karyawan extends CI_Controller{
             "id_submit_karyawan" => $id_submit_karyawan
         );
         $data = array(
-            "delete_row" => 0
+            "delete_row" => 0,
+            "status_aktif_karyawan" => 0
         );
         updateRow("karyawan",$data,$where);
         redirect("master/karyawan");
