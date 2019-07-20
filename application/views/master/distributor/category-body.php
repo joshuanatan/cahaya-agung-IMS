@@ -104,37 +104,37 @@
                 <h4 class="modal-title" id="exampleModalTitle">Tambah Data Distributor</h4>
             </div>
             <div class="modal-body">
-            <h4 class="example-title">ID Submit Distributor</h4>
-            <input type="text" class="form-control" id="inputPlaceholder"  disabled placeholder="700004">
-            <h4 class="example-title">Nama Distributor</h4>
-            <input type="text" class="form-control" id="inputPlaceholder" placeholder="Nama Distributor">
-            <h4 class="example-title">Alamat Distributor</h4>
-            <input type="text" class="form-control" id="inputPlaceholder" placeholder="Alamat Distributor">
-            <h4 class="example-title">Nomor Telepon Distributor</h4>
-            <input type="text" class="form-control" id="inputPlaceholder" placeholder="Nomor Telepon Distributor">
-            <h4 class="example-title">Nama PIC</h4>
-            <input type="text" class="form-control" id="inputPlaceholder" placeholder="Nama PIC">
-            <h4 class="example-title">Kontak PIC</h4>
-            <input type="text" class="form-control" id="inputPlaceholder" placeholder="Kontak PIC">
-            <h4 class="example-title">Status Aktif Distributor</h4>
-            <input type="text" class="form-control" id="inputPlaceholder" placeholder="Status Aktif Distributor">
-            <h4 class="example-title">Tanggal Masuk Distributor</h4>
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">
-                        <i class="icon wb-calendar" aria-hidden="true"></i>
-                    </span>
+            <form action="<?php echo base_url(); ?>master/distributor/insert" method="post">
+                <h4 class="example-title">ID Submit Distributor</h4>
+                <input type="text" class="form-control" id="inputPlaceholder"  disabled placeholder="700004">
+                <h4 class="example-title">Nama Distributor</h4>
+                <input type="text" class="form-control" id="inputPlaceholder" placeholder="Nama Distributor" name="nama_distributor">
+                <h4 class="example-title">Alamat Distributor</h4>
+                <input type="text" class="form-control" id="inputPlaceholder" placeholder="Alamat Distributor" name="alamat_distributor">
+                <h4 class="example-title">Nomor Telepon Distributor</h4>
+                <input type="text" class="form-control" id="inputPlaceholder" placeholder="Nomor Telepon Distributor" name="notelp_distributor">
+                <h4 class="example-title">Nama PIC</h4>
+                <input type="text" class="form-control" id="inputPlaceholder" placeholder="Nama PIC" name="nama_pic">
+                <h4 class="example-title">Kontak PIC</h4>
+                <input type="text" class="form-control" id="inputPlaceholder" placeholder="Kontak PIC" name="nohp_pic">
+                <h4 class="example-title">Tanggal Masuk Distributor</h4>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <i class="icon wb-calendar" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <input type="text" class="form-control" data-plugin="datepicker" name="tgl_tambah_distributor">
                 </div>
-                <input type="text" class="form-control" data-plugin="datepicker">
-            </div>
-            
-            
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
-                <button type="button" class="btn btn-primary">Simpan</button>
-            </div>
-
+                
+                
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                    
+                </div>
+            </form>
         </div>
     </div>
 </div>

@@ -43,7 +43,7 @@
                 <h4 class="modal-title" id="exampleModalTitle">Tambah Data Barang</h4>
             </div>
             <div class="modal-body">
-                <form action="" method="post">
+                <form action="<?php echo base_url(); ?>master/produk/insert" method="post">
                     <h4 class="example-title">ID Submit Barang</h4>
                     <input type="text" class="form-control" id="inputPlaceholder" placeholder="90007" disabled>
                     <h4 class="example-title">Nama Barang</h4>

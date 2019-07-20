@@ -29,5 +29,15 @@ class User extends CI_Controller{
         $this->close();
     }
 
+    public function insert(){
+        $data = array(
+            'username' => $this->input->post('username') , 
+            'password' => $this->input->post('password') ,
+            'role_user' => $this->input->post('role_user') 
+        );
+
+        insertRow('user', $data);
+        redirect('master/user');
+    }
 }
 ?>

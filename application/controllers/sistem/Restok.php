@@ -71,6 +71,8 @@ class Restok extends CI_Controller{
         $this->load->view("req/content-close");
         $this->close();
     }
-
+    public function insert(){
+        
+    }
 }
 ?>
