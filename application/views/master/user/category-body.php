@@ -50,19 +50,19 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
-                <h4 class="modal-title" id="exampleModalTitle">Tambah Data User</h4>
+                <h4 class="modal-title" id="exampleModalTitle">Edit Data User</h4>
             </div>
             <div class="modal-body">
-                <form action="<?php echo base_url(); ?>master/user/insert" method="post">
-                    <input type="hidden" class="form-control" id="inputPlaceholder" value = "<?php echo $user[$a]["id_submit_user"]; ?>" disabled placeholder="600006">
+                <form action="<?php echo base_url(); ?>master/user/update" method="post">
+                    <input type="hidden" class="form-control" id="inputPlaceholder" value = "<?php echo $user[$a]["id_submit_user"]; ?>" name = "id_submit_user">
                     <h4 class="example-title">Nama User</h4>
                     <input type="text" class="form-control" id="inputPlaceholder" value = "<?php echo $user[$a]["username"]; ?>" placeholder="Nama User" name="username">
                     <h4 class="example-title">Password</h4>
                     <input type="password" class="form-control" id="inputPlaceholder" name="password">
                     <h4 class="example-title">Role</h4>
-                    <select class="form-control" id="inputPlaceholder" placeholder="Nama Karyawan" name="role_user">
+                    <select class="form-control" id="inputPlaceholder" name="role_user">
                         <option value = "ADMIN">ADMIN</option>
-                        <option value = "USER" <?php if($user[$a]["role"] == "USER") echo "SELECTED"; ?>>USER</option>
+                        <option value = "USER" <?php if($user[$a]["role_user"] == "USER") echo "SELECTED"; ?>>USER</option>
                     </select>
                     
                     </div>

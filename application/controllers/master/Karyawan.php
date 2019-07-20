@@ -47,5 +47,18 @@ class Karyawan extends CI_Controller{
         redirect('master/karyawan');
 
     }
+    public function update(){
+        $where = array(
+            "id_submit_karyawan" => $this->input->post("id_submit_karyawan")
+        );
+        $data = array(
+            "nama_karyawan" => $this->input->post('nama_karyawan'),
+            "tgl_masuk_karyawan" => $this->input->post('tgl_masuk_karyawan'),
+            "gaji_perjam" => $this->input->post('gaji_perjam'),
+            "nohp_karyawan" => $this->input->post('nohp_karyawan'),
+        );
+        updateRow("karyawan",$data,$where);
+        redirect("master/karyawan");
+    }
 }
 ?>

@@ -49,5 +49,19 @@ class Produk extends CI_Controller{
         insertRow("barang", $data);
         redirect("master/produk");
     }
+    public function update(){
+        $where = array(
+            "id_submit_barang" => $this->input->post("id_submit_barang")
+        );
+        $data = array(
+            "nama_barang" => $this->input->post('nama_barang'),
+            "stok" => $this->input->post('stok'),
+            "satuan_barang" => $this->input->post('satuan_barang'),
+            "harga_jual_barang" => $this->input->post('harga_jual_barang'),
+            "tgl_masuk_barang" => $this->input->post('tgl_masuk_barang'),
+        );
+        updateRow("barang",$data,$where);
+        redirect("master/produk");
+    }
 }
 ?>

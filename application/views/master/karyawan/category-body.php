@@ -57,24 +57,24 @@
                 </button>
                 <h4 class="modal-title" id="exampleModalTitle">Edit Data Karyawan</h4>
             </div>
-            
+            <form action = "<?php echo base_url();?>master/karyawan/update" method = "POST">
                 <div class="modal-body">
-                    <input type="hidden" class="form-control" value = "<?php echo $a->id_submit_karyawan;?>">
+                    <input type="hidden" class="form-control" value = "<?php echo $a->id_submit_karyawan;?>" name = "id_submit_karyawan">
                     <h4 class="example-title">Nama Karyawan</h4>
-                    <input type="text" class="form-control" id="inputPlaceholder" value = "<?php echo $a->nama_karyawan;?>" placeholder="Nama Karyawan">
+                    <input type="text" class="form-control" name = "nama_karyawan" id="inputPlaceholder" value = "<?php echo $a->nama_karyawan;?>" placeholder="Nama Karyawan">
                     <h4 class="example-title">Tanggal Masuk Karyawan</h4>
-                    <input type="date" value = "<?php $date = date_create($a->tgl_masuk_karyawan); echo date_format($date,"Y-m-d"); ?>" class="form-control" data-plugin="datepicker">
+                    <input type="date" name = "tgl_masuk_karyawan" value = "<?php $date = date_create($a->tgl_masuk_karyawan); echo date_format($date,"Y-m-d"); ?>" class="form-control">
                     <h4 class="example-title">Gaji per Jam</h4>
-                    <input type="text" class="form-control" id="inputPlaceholder" value = "<?php echo $a->gaji_perjam;?>" placeholder="Gaji per Jam">
+                    <input type="text" class="form-control" name = "gaji_perjam" id="inputPlaceholder" value = "<?php echo $a->gaji_perjam;?>" placeholder="Gaji per Jam">
                     <h4 class="example-title">Nomor Telepon Karyawan</h4>
-                    <input type="text" class="form-control" id="inputPlaceholder" value = "<?php echo $a->nohp_karyawan;?> " placeholder="Nomor Telepon Karyawan">
+                    <input type="text" class="form-control" name = "nohp_karyawan" id="inputPlaceholder" value = "<?php echo $a->nohp_karyawan;?> " placeholder="Nomor Telepon Karyawan">
                 
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
-                    <button type="button" class="btn btn-primary">Simpan</button>
+                    <button type="submit" class="btn btn-primary">Simpan</button>
                 </div>
-            
+            </form>
         </div>
     </div>
 </div>

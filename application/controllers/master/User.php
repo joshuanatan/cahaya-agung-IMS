@@ -38,13 +38,34 @@ class User extends CI_Controller{
     }
 
     public function insert(){
-        $data = array(
-            'username' => $this->input->post('username') , 
+        $data = array( 
+            'username' => $this->input->post('username') ,
             'password' => $this->input->post('password') ,
             'role_user' => $this->input->post('role_user') 
         );
 
         insertRow('user', $data);
+        redirect('master/user');
+    }
+    public function update(){
+        $where = array(
+            "id_submit_user" => $this->input->post("id_submit_user")
+        );
+        $data = array();
+        if($this->input->post("password") == ""){
+            $data = array(
+                'username' => $this->input->post('username'),
+                'role_user' => $this->input->post('role_user') 
+            );
+        } 
+        else{
+            $data = array( 
+                'username' => $this->input->post('username') ,
+                'password' => $this->input->post('password') ,
+                'role_user' => $this->input->post('role_user') 
+            );
+        }
+        updateRow("user",$data,$where);
         redirect('master/user');
     }
 }

@@ -55,23 +55,18 @@
                 <h4 class="modal-title" id="exampleModalTitle">Edit Data Barang</h4>
             </div>
             <div class="modal-body">
-                <form action="<?php echo base_url(); ?>master/produk/insert" method="post">
-                    <input type="hidden" class="form-control" value = "<?php echo $barang[$a]["id_submit_barang"];?>" id="inputPlaceholder" placeholder="90007">
+                <form action="<?php echo base_url(); ?>master/produk/update" method="post">
+                    <input type="hidden" class="form-control" name = "id_submit_barang" value = "<?php echo $barang[$a]["id_submit_barang"];?>" id="inputPlaceholder" placeholder="90007">
                     <h4 class="example-title">Nama Barang</h4>
                     <input type="text" class="form-control" value = "<?php echo $barang[$a]["nama_barang"];?>" id="nama_barang" name="nama_barang" placeholder="Nama Barang">
+                    <h4 class="example-title">Stok Barang (Jangan di rubah jika tidak perlu)</h4>
+                    <input type="text" class="form-control" value = "<?php echo $barang[$a]["stok"];?>" id="nama_barang" name="stok" placeholder="Nama Barang">
                     <h4 class="example-title">Satuan Barang</h4>
                     <input type="text" class="form-control" value = "<?php echo $barang[$a]["satuan_barang"];?>" id="satuan_barang" name="satuan_barang" placeholder="Satuan barang">
                     <h4 class="example-title">Harga Jual Barang</h4>
                     <input type="text" class="form-control" value = "<?php echo $barang[$a]["harga_jual_barang"];?>" id="harga_jual_barang" name="harga_jual_barang" placeholder="Harga Jual Barang">
                     <h4 class="example-title">Tanggal Masuk Barang</h4>
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">
-                                <i class="icon wb-calendar" aria-hidden="true"></i>
-                            </span>
-                        </div>
-                        <input type="text" class="form-control" value = "<?php echo $barang[$a]["tgl_masuk_barang"];?>" data-plugin="datepicker" name="tgl_masuk_barang">
-                    </div>
+                    <input type="date" class="form-control" value = "<?php $date = date_create($barang[$a]["tgl_masuk_barang"]); echo date_format($date,"Y-m-d");?>" name="tgl_masuk_barang">
                     <br/>
                     <div class= "form-group">
                         <button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
