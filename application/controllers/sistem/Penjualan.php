@@ -31,7 +31,6 @@ class Penjualan extends CI_Controller{
 
     public function insert(){
         $data = array(
-           'tgl_penjualan' => $this->input->post('tgl_penjualan'),
            'jumlah_item_terjual' => $this->input->post('jumlah_item_terjual'),
            'jumlah_uang_masuk' => $this->input->post('jumlah_uang_masuk'),
            'id_user_add' => 0
@@ -42,11 +41,30 @@ class Penjualan extends CI_Controller{
             'id_barang' => $this->input->post('id_barang') , 
             'jumlah_terjual' => $this->input->post('jumlah_item_terjual') , 
             'harga_jual' => $this->input->post('jumlah_uang_masuk') , 
-            'id_submit_penjualan' => $this->input->post('id_submit_penjualan') , 
+            'id_submit_penjualan' => $result , 
             'id_user_add' => 0
         );
         insertRow('item_penjualan', $data2);
-        redirect('sistem/penjualan');
+        
+        $count = $data2['id_barang'];
+        foreach($count as $a) {
+            $where = array(
+                'id_submit_barang' => $a, 
+            );
+
+            $stok_brg = get1Value("barang","stok", $where);
+            /*
+            $stok_update = array(
+                'stok' => ($stok_brg - $data['jumlah_item_terjual'])
+            );*/
+            //updateRow("barang", $stok_update, $where); 
+            
+        }
+        
+        
+        
+        
+        
     }
 
 }
