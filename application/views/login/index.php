@@ -43,28 +43,19 @@
 				<div class="panel">
 					<div class="panel-body">
 						<div class="brand">
-							<img class="brand-img" src="assets//images/logo-colored.png" alt="...">
+							<h2 align = "center">TB. CAHAYA AGUNG</h2>
 							<h2 class="brand-text font-size-18">Inventory Management System</h2>
 						</div>
-						<form method="post" action="#">
+						<form method="post" action="<?php echo base_url();?>welcome/login">
 							<div class="form-group form-material floating" data-plugin="formMaterial">
-								<input type="email" class="form-control" name="email" />
-								<label class="floating-label">Email</label>
+								<input type="text" class="form-control" name="username" />
+								<label class="floating-label">Username</label>
 							</div>
 							<div class="form-group form-material floating" data-plugin="formMaterial">
 								<input type="password" class="form-control" name="password" />
 								<label class="floating-label">Password</label>
 							</div>
-							<div class="form-group clearfix">
-								<div class="checkbox-custom checkbox-inline checkbox-primary checkbox-lg float-left">
-								<input type="checkbox" id="inputCheckbox" name="remember">
-								<label for="inputCheckbox">Remember me</label>
-								</div>
-								
-							</div>
-							<a href="<?php echo base_url(); ?>/Dashboard">
-								<button type="button" class="btn btn-primary btn-block btn-lg mt-40">Sign in</button>
-							</a>
+							<button type = "submit" class = "btn btn-sm btn-primary col-lg-12">LOGIN</button>
 						</form>
 					</div>
 				</div>

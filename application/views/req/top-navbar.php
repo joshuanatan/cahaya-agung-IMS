@@ -48,14 +48,14 @@
 					<div class="dropdown-menu" role="menu">
 						<a class="dropdown-item" href="javascript:void(0)" role="menuitem"><i class="icon wb-user" aria-hidden="true"></i> Profile</a>
 						<div class="dropdown-divider" role="presentation"></div>
-						<a class="dropdown-item" href="<?php echo base_url();?>login/welcome/logout" role="menuitem"><i class="icon wb-power" aria-hidden="true"></i> Logout</a>
+						<a class="dropdown-item" href="<?php echo base_url();?>welcome/logout" role="menuitem"><i class="icon wb-power" aria-hidden="true"></i> Logout</a>
 					</div>
 				</li>
 			</ul>
 			<!-- End Navbar Toolbar Right -->
 
 			<div class="navbar-brand navbar-brand-center">
-				<a href="<?php echo base_url();?>welcome">
+				<a href="<?php echo base_url();?><?php echo strtolower($this->session->role);?>">
 					<img class="navbar-brand-logo navbar-brand-logo-normal" src="<?php echo base_url();?>assets/images/logo.png"
 					title="Remark">
 					<img class="navbar-brand-logo navbar-brand-logo-special" src="<?php echo base_url();?>assets/images/logo-colored.png"
