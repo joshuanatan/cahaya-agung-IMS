@@ -39,20 +39,23 @@ class Admin extends CI_Controller{
             $where = array(
                 "id_barang" => $data["barang"][$a]["id_submit_barang"],
                 "month(tgl_penjualan)" => date("m"),
-                "year(tgl_penjualan)" => date("Y")
+                "year(tgl_penjualan)" => date("Y"),
+                "status_aktif_penjualan" => 1
             );
             $data["barang"][$a]["terjual"] = $this->Mdpenjualan->getItemAmountOrder($where);
         }
         $where = array(
-            "month('tgl_penjualan')" => date("m"),
-            "year('tgl_penjualan')" => date("Y"),
-            "day('tgl_penjualan')" => date("d"),
+            "month(tgl_penjualan)" => date("m"),
+            "year(tgl_penjualan)" => date("Y"),
+            "day(tgl_penjualan)" => date("d"),
+            "status_aktif_penjualan" => 1
         );
         $data["jumlah_penjualan_harian"] = getAmount("penjualan","id_submit_penjualan",$where);
         $data["jumlah_pemasukan_harian"] = getTotal("penjualan","jumlah_uang_masuk",$where);
         $where = array(
-            "month('tgl_penjualan')" => date("m"),
-            "year('tgl_penjualan')" => date("Y"),
+            "month(tgl_penjualan)" => date("m"),
+            "year(tgl_penjualan)" => date("Y"),
+            "status_aktif_penjualan" => 1
         );
         $data["jumlah_penjualan_bulanan"] = getAmount("penjualan","id_submit_penjualan",$where);
         $data["jumlah_pemasukan_bulanan"] = getTotal("penjualan","jumlah_uang_masuk",$where);
