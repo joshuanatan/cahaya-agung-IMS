@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 10, 2019 at 04:00 PM
+-- Generation Time: Jul 22, 2019 at 05:08 AM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.10
 
@@ -44,12 +44,13 @@ CREATE TABLE `absen` (
 CREATE TABLE `barang` (
   `id_submit_barang` int(11) NOT NULL,
   `nama_barang` text NOT NULL,
-  `stok` int(11) NOT NULL,
+  `stok` decimal(11,1) NOT NULL,
   `satuan_barang` varchar(200) NOT NULL,
   `harga_jual_barang` int(11) NOT NULL,
   `tgl_masuk_barang` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `status_aktif_barang` int(11) NOT NULL,
-  `id_user_add` int(11) NOT NULL
+  `id_user_add` int(11) NOT NULL,
+  `delete_row` int(11) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -60,14 +61,29 @@ CREATE TABLE `barang` (
 
 CREATE TABLE `distributor` (
   `id_submit_distributor` int(11) NOT NULL,
-  `nama_distributor` int(200) NOT NULL,
+  `nama_distributor` varchar(200) NOT NULL,
   `alamat_distributor` text NOT NULL,
   `notelp_distributor` varchar(20) NOT NULL,
   `nama_pic` varchar(200) NOT NULL,
   `nohp_pic` varchar(20) NOT NULL,
-  `status_aktif_distributor` int(11) NOT NULL,
+  `status_aktif_distributor` int(11) NOT NULL COMMENT '1 aktif, 0 hilang',
   `tgl_tambah_distributor` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `id_user_add` int(11) NOT NULL
+  `id_user_add` int(11) NOT NULL,
+  `delete_row` int(11) NOT NULL DEFAULT '1' COMMENT '1 ada, 0 hilang'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gaji`
+--
+
+CREATE TABLE `gaji` (
+  `id_submit_gaji` int(11) NOT NULL,
+  `id_submit_karyawan` int(11) NOT NULL,
+  `jumlah_gaji` int(11) NOT NULL,
+  `bulan_gaji` int(11) NOT NULL,
+  `tahun_gaji` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -95,7 +111,6 @@ CREATE TABLE `item_penerimaan_barang` (
   `id_submit_item_penerimaan` int(11) NOT NULL,
   `id_submit_penerimaan` int(11) NOT NULL,
   `id_submit_item_pemesanan` int(11) NOT NULL,
-  `tgl_terima` date NOT NULL,
   `jumlah_terima` int(11) NOT NULL,
   `id_user_add` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -109,7 +124,8 @@ CREATE TABLE `item_penerimaan_barang` (
 CREATE TABLE `item_penjualan` (
   `id_submit_item_penjualan` int(11) NOT NULL,
   `id_barang` int(11) NOT NULL,
-  `jumlah_terjual` int(11) NOT NULL,
+  `jumlah_terjual` decimal(11,1) NOT NULL,
+  `harga_jual` int(11) NOT NULL,
   `id_submit_penjualan` int(11) NOT NULL,
   `id_user_add` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -127,7 +143,8 @@ CREATE TABLE `karyawan` (
   `gaji_perjam` int(11) NOT NULL,
   `status_aktif_karyawan` int(11) NOT NULL,
   `nohp_karyawan` varchar(20) NOT NULL,
-  `id_user_add` int(11) NOT NULL
+  `id_user_add` int(11) NOT NULL,
+  `delete_row` int(11) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -166,10 +183,11 @@ CREATE TABLE `penerimaan_barang` (
 
 CREATE TABLE `penjualan` (
   `id_submit_penjualan` int(11) NOT NULL,
-  `tgl_penjualan` date NOT NULL,
+  `tgl_penjualan` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `jumlah_item_terjual` int(11) NOT NULL,
   `jumlah_uang_masuk` int(11) NOT NULL,
-  `id_user_add` int(11) NOT NULL
+  `id_user_add` int(11) NOT NULL,
+  `status_aktif_penjualan` int(11) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -180,10 +198,19 @@ CREATE TABLE `penjualan` (
 
 CREATE TABLE `user` (
   `id_submit_user` int(11) NOT NULL,
-  `username` int(11) NOT NULL,
-  `password` int(11) NOT NULL,
-  `role_user` int(11) NOT NULL
+  `username` varchar(200) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `status_aktif_user` int(11) NOT NULL,
+  `role_user` varchar(200) NOT NULL,
+  `delete_row` int(11) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id_submit_user`, `username`, `password`, `status_aktif_user`, `role_user`, `delete_row`) VALUES
+(2, 'joshuanatan', 'e10adc3949ba59abbe56e057f20f883e', 1, 'ADMIN', 0);
 
 --
 -- Indexes for dumped tables
@@ -206,6 +233,12 @@ ALTER TABLE `barang`
 --
 ALTER TABLE `distributor`
   ADD PRIMARY KEY (`id_submit_distributor`);
+
+--
+-- Indexes for table `gaji`
+--
+ALTER TABLE `gaji`
+  ADD PRIMARY KEY (`id_submit_gaji`);
 
 --
 -- Indexes for table `item_pemesanan_barang`
@@ -250,6 +283,12 @@ ALTER TABLE `penjualan`
   ADD PRIMARY KEY (`id_submit_penjualan`);
 
 --
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id_submit_user`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -270,6 +309,12 @@ ALTER TABLE `barang`
 --
 ALTER TABLE `distributor`
   MODIFY `id_submit_distributor` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `gaji`
+--
+ALTER TABLE `gaji`
+  MODIFY `id_submit_gaji` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `item_pemesanan_barang`
@@ -312,6 +357,12 @@ ALTER TABLE `penerimaan_barang`
 --
 ALTER TABLE `penjualan`
   MODIFY `id_submit_penjualan` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id_submit_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
